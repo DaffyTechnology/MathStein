@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+   background: #3498DB;
+}
+.box{
+   height: 1400px;
+   background: white;
+   border: 2px solid white;
+   border-radius: 10px;
+   margin-top: 20px;
+}
+.element{
+   margin-bottom: 10px;
+   height: 60px;
+   outline: none;
+   border-radius: 15px;
+   width: 150px;
+   border: 3px solid black;
+   font-size: 25px;
+}
+::placeholder{
+   padding: 0px 10px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.calculator{
+   margin-left: 10px;
+   padding-bottom: 2px;
+   border-radius: 1em;
+   width: 400px;
+}
+.top{
+   margin-left: 10px;
+   width: 400px;
+}
+.txt{
+   font-size: 30px;
+   margin-top: 500px;
+}
+.head{
+   margin-top: 40px;
+}
+.ans{
+   background: #fff;
+   width: 400px;
+   display: flex;
+   position: relative;
+   left: -12px;
+   height: 60px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   border-radius: 20px;
+   margin-top: 25px;
+   border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#det{
+    margin-left: 10px;
+}
+.word{
+    font-size: 35px;
+}
+.bracket{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 200px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.ansbox{
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 15px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 120px;
+    margin-left: 10px;
+}
+.box2{
+    margin-left: 10px;
+    font-size: 45px;
+    width: 250px;
+}
+.box3{
+    margin-left: 10px;
+    font-size: 45px;
+    width: 250px;
+    margin-top: 25px;
+}
+#box{
+    display: none;
+}
+#table, #table2{
+    display: none;
+}
+#valueb, #valued{
+    margin-left: 50px;
+}
+#ans, #ans2, #ans3{
+    font-size: 30px;
+    display: none;
+}
+@media(max-width: 320px){
+body{
+   background: #3498DB;
+}
+.box{
+   height: 1250px;
+   background: white;
+   border: 2px solid white;
+   border-radius: 10px;
+   margin-top: 20px;
+}
+.element{
+   margin-bottom: 10px;
+   height: 60px;
+   outline: none;
+   border-radius: 15px;
+   width: 100px;
+   border: 3px solid black;
+   font-size: 25px;
+}
+::placeholder{
+   padding: 0px 10px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.calculator{
+   margin-left: 10px;
+   padding-bottom: 2px;
+   border-radius: 1em;
+   width: 300px;
+}
+.top{
+   margin-left: 10px;
+   width: 300px;
+}
+.txt{
+   font-size: 30px;
+   margin-top: 500px;
+}
+.head{
+   margin-top: 40px;
+}
+.ans{
+   background: #fff;
+   width: 400px;
+   display: flex;
+   position: relative;
+   left: -12px;
+   height: 50px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   border-radius: 20px;
+   margin-top: 25px;
+   border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#det{
+    margin-left: 10px;
+}
+.word{
+    font-size: 30px;
+}
+.bracket{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 200px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.ansbox{
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 15px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 120px;
+    margin-left: 10px;
+}
+.box2{
+    margin-left: 10px;
+    font-size: 40px;
+    width: 250px;
+}
+.box3{
+    margin-left: 10px;
+    font-size: 40px;
+    width: 250px;
+    margin-top: 25px;
+}
+#box{
+    display: none;
+}
+#table, #table2{
+    display: none;
+}
+#valueb, #valued{
+    margin-left: 50px;
+}
+#ans, #ans2, #ans3{
+    font-size: 25px;
+    display: none;
+ }
+}
+@media(max-width: 375px){
+body{
+   background: #3498DB;
+}
+.box{
+   height: 1250px;
+   background: white;
+   border: 2px solid white;
+   border-radius: 10px;
+   margin-top: 20px;
+}
+.element{
+   margin-bottom: 10px;
+   height: 60px;
+   outline: none;
+   border-radius: 15px;
+   width: 100px;
+   border: 3px solid black;
+   font-size: 25px;
+}
+::placeholder{
+   padding: 0px 10px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.calculator{
+   margin-left: 10px;
+   padding-bottom: 2px;
+   border-radius: 1em;
+   width: 300px;
+}
+.top{
+   margin-left: 10px;
+   width: 300px;
+}
+.txt{
+   font-size: 30px;
+   margin-top: 500px;
+}
+.head{
+   margin-top: 40px;
+}
+.ans{
+   background: #fff;
+   width: 400px;
+   display: flex;
+   position: relative;
+   left: -12px;
+   height: 50px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   border-radius: 20px;
+   margin-top: 25px;
+   border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#det{
+    margin-left: 10px;
+}
+.word{
+    font-size: 30px;
+}
+.bracket{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 200px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.ansbox{
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 15px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 120px;
+    margin-left: 10px;
+}
+.box2{
+    margin-left: 10px;
+    font-size: 40px;
+    width: 250px;
+}
+.box3{
+    margin-left: 10px;
+    font-size: 40px;
+    width: 250px;
+    margin-top: 25px;
+}
+#box{
+    display: none;
+}
+#table, #table2{
+    display: none;
+}
+#valueb, #valued{
+    margin-left: 50px;
+}
+#ans, #ans2, #ans3{
+    font-size: 25px;
+    display: none;
+ }
+}
+@media(max-width: 435px){
+body{
+   background: #3498DB;
+}
+.box{
+   height: 1250px;
+   background: white;
+   border: 2px solid white;
+   border-radius: 10px;
+   margin-top: 20px;
+}
+.element{
+   margin-bottom: 10px;
+   height: 60px;
+   outline: none;
+   border-radius: 15px;
+   width: 100px;
+   border: 3px solid black;
+   font-size: 25px;
+}
+::placeholder{
+   padding: 0px 10px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.calculator{
+   margin-left: 10px;
+   padding-bottom: 2px;
+   border-radius: 1em;
+   width: 300px;
+}
+.top{
+   margin-left: 10px;
+   width: 300px;
+}
+.txt{
+   font-size: 30px;
+   margin-top: 500px;
+}
+.head{
+   margin-top: 40px;
+}
+.ans{
+   background: #fff;
+   width: 400px;
+   display: flex;
+   position: relative;
+   left: -12px;
+   height: 50px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   border-radius: 20px;
+   margin-top: 25px;
+   border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#det{
+    margin-left: 10px;
+}
+.word{
+    font-size: 30px;
+}
+.bracket{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 200px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.ansbox{
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 15px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 120px;
+    margin-left: 10px;
+}
+.box2{
+    margin-left: 10px;
+    font-size: 40px;
+    width: 250px;
+}
+.box3{
+    margin-left: 10px;
+    font-size: 40px;
+    width: 250px;
+    margin-top: 25px;
+}
+#box{
+    display: none;
+}
+#table, #table2{
+    display: none;
+}
+#valueb, #valued{
+    margin-left: 50px;
+}
+#ans, #ans2, #ans3{
+    font-size: 25px;
+    display: none;
+ }
+}
+@media(max-width: 1024px){
+body{
+   background: #3498DB;
+}
+.box{
+   height: 1400px;
+   background: white;
+   border: 2px solid white;
+   border-radius: 10px;
+   margin-top: 20px;
+}
+.element{
+   margin-bottom: 10px;
+   height: 70px;
+   outline: none;
+   border-radius: 15px;
+   width: 150px;
+   border: 4px solid black;
+   font-size: 25px;
+}
+::placeholder{
+   padding: 0px 10px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.calculator{
+   margin-left: 10px;
+   padding-bottom: 2px;
+   border-radius: 1em;
+   width: 400px;
+}
+.top{
+   margin-left: 10px;
+   width: 400px;
+}
+.txt{
+   font-size: 30px;
+   margin-top: 500px;
+}
+.head{
+   margin-top: 40px;
+}
+.ans{
+   background: #fff;
+   width: 400px;
+   display: flex;
+   position: relative;
+   left: -12px;
+   height: 50px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   border-radius: 20px;
+   margin-top: 25px;
+   border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#det{
+    margin-left: 10px;
+}
+.word{
+    font-size: 30px;
+}
+.bracket{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 200px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 280px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.ansbox{
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 15px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 120px;
+    margin-left: 10px;
+}
+.box2{
+    margin-left: 10px;
+    font-size: 40px;
+    width: 250px;
+}
+.box3{
+    margin-left: 10px;
+    font-size: 40px;
+    width: 250px;
+    margin-top: 25px;
+}
+#box{
+    display: none;
+}
+#table, #table2{
+    display: none;
+}
+#valueb, #valued{
+    margin-left: 50px;
+}
+#ans, #ans2, #ans3{
+    font-size: 25px;
+    display: none;
+}
+span, p{
+    font-size: 40px;
+ }
+}
+@media(max-width: 1440px){
+body{
+   background: #3498DB;
+}
+.box{
+   height: 1400px;
+   background: white;
+   border: 2px solid white;
+   border-radius: 10px;
+   margin-top: 20px;
+}
+.element{
+   margin-bottom: 10px;
+   height: 70px;
+   outline: none;
+   border-radius: 15px;
+   width: 150px;
+   border: 4px solid black;
+   font-size: 25px;
+}
+::placeholder{
+   padding: 0px 10px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.calculator{
+   margin-left: 10px;
+   padding-bottom: 2px;
+   border-radius: 1em;
+   width: 400px;
+}
+.top{
+   margin-left: 10px;
+   width: 400px;
+}
+.txt{
+   font-size: 30px;
+   margin-top: 500px;
+}
+.head{
+   margin-top: 40px;
+}
+.ans{
+   background: #fff;
+   width: 400px;
+   display: flex;
+   position: relative;
+   left: -12px;
+   height: 50px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   border-radius: 20px;
+   margin-top: 25px;
+   border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#det{
+    margin-left: 10px;
+}
+.word{
+    font-size: 35px;
+}
+.bracket{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 200px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 280px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.ansbox{
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 15px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 120px;
+    margin-left: 10px;
+}
+.box2{
+    margin-left: 10px;
+    font-size: 40px;
+    width: 250px;
+}
+.box3{
+    margin-left: 10px;
+    font-size: 40px;
+    width: 250px;
+    margin-top: 25px;
+}
+#box{
+    display: none;
+}
+#table, #table2{
+    display: none;
+}
+#valueb, #valued{
+    margin-left: 50px;
+}
+#ans, #ans2, #ans3{
+    font-size: 25px;
+    display: none;
+}
+span, p{
+    font-size: 40px;
+ }
+}
+@media(max-width: 2560px){
+body{
+   background: #3498DB;
+}
+.box{
+   height: 1400px;
+   background: white;
+   border: 2px solid white;
+   border-radius: 10px;
+   margin-top: 20px;
+}
+.element{
+   margin-bottom: 10px;
+   height: 78px;
+   outline: none;
+   border-radius: 15px;
+   width: 200px;
+   border: 4px solid black;
+   font-size: 30px;
+}
+::placeholder{
+   padding: 0px 10px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.calculator{
+   margin-left: 10px;
+   padding-bottom: 2px;
+   border-radius: 1em;
+   width: 500px;
+}
+.top{
+   margin-left: 10px;
+   width: 500px;
+}
+.txt{
+   font-size: 30px;
+   margin-top: 500px;
+}
+.head{
+   margin-top: 40px;
+}
+.ans{
+   background: #fff;
+   width: 520px;
+   display: flex;
+   position: relative;
+   left: -12px;
+   height: 90px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   border-radius: 20px;
+   margin-top: 25px;
+   border: 4px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#det{
+    margin-left: 10px;
+}
+.word{
+    font-size: 48px;
+}
+.bracket{
+    border: 4px solid black;
+    border-radius: 20px;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    width: 200px;
+}
+.btn{
+  height: 85px;
+  background: black;
+  width: 300px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 34px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.ansbox{
+    height: 150px;
+    border: 4px solid black;
+    border-radius: 15px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 120px;
+    margin-left: 10px;
+}
+.box2{
+    margin-left: 10px;
+    font-size: 45px;
+    width: 250px;
+}
+.box3{
+    margin-left: 10px;
+    font-size: 45px;
+    width: 250px;
+    margin-top: 25px;
+}
+#box{
+    display: none;
+}
+#table, #table2{
+    display: none;
+}
+#valueb, #valued{
+    margin-left: 50px;
+}
+#ans, #ans2, #ans3{
+    font-size: 40px;
+    display: none;
+}
+span, p{
+    font-size: 40px;
+ }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Determinant Of 2×2</title>
+</head>
+<body>
+    <fieldset class="box">
+     <div class="head">
+         <fieldset class="bracket">
+   <form name="sform" method="post" onkeyup="return solve()">
+    <table class="calculator">
+  <tr>
+    <td colspan="10"><br><strong class="word">a<sub>11</sub></strong></br>
+    <input class="element" type="number" name="a" id="a" autocomplete="off"></td>
+    
+    <td><br><strong class="word">a<sub>12</sub></strong></br><input type="number" class="element" name="b" autocomplete="off"></td>
+  </tr>
+
+      <table class="top">     
+  <tr>
+    <td colspan="10"><br><strong class="word">a<sub>21</sub></strong></br><input class="element" type="number" name="c" autocomplete="off"></td>
+    
+    <td><br><strong class="word">a<sub>22</sub></strong></br><input type="number" class="element" name="d" autocomplete="off"></td>
+  </tr>
+  </table>
+  </div>
+  
+      <div class="ans"><strong class="answer">Determinant =<span id="det"></span></strong></div>
+       </div>
+       </form>
+      
+      <p><button class="btn" onclick="return solvings()">Show Solvings</button></p>
+      
+      <fieldset class="ansbox" id="box">
+       <table class="box2" id="table">
+          <tr>
+           <td colspan="10"><span id="valuea"></span></td>
+           <td><span id="valueb"></span></td>
+          </tr>
+         
+         <table class="box3" id="table2">
+          <tr>
+           <td colspan="10"><span id="valuec"></span></td>
+           <td><span id="valued"></span></td>
+          </tr>
+        </table>         
+      </fieldset>
+      
+      <p id="ans">Determinant = <span id="valued2"></span> × <span id="valuea2"></span> - <span id="valuec2"></span> × <span id="valueb2"></span></p>
+      
+      <p id="ans2">Determinant = <span id="valuez"></span> - <span id="valuey"></span></p>
+      
+      <p id="ans3">Determinant = <span id="valuex"></span></p>
+      
+    </fieldset>
+    
+    
+    
+<script>
+function solve(){
+let a = document.sform.a.value;
+let b = document.sform.b.value;
+let c = document.sform.c.value;
+let d = document.sform.d.value;
+let e = a * d;
+let f = c * b;
+//g is the Det
+let g = e - f;
+let h = document.getElementById("det").innerText=g;
+let i = document.getElementById("valuea").innerText=a;
+let j = document.getElementById("valueb").innerText=b;
+let k = document.getElementById("valuec").innerText=c;
+let l = document.getElementById("valued").innerText=d;
+let m = document.getElementById("valuea2").innerText=a;
+let n = document.getElementById("valueb2").innerText=b;
+let o = document.getElementById("valuec2").innerText=c;
+let p = document.getElementById("valued2").innerText=d;
+let q = document.getElementById("valuez").innerText=e;
+let r = document.getElementById("valuey").innerText=f;
+let s = document.getElementById("valuex").innerText=g;
+
+if(a==null || a==""){
+    document.getElementById("box").style.display="none";
+    document.getElementById("table").style.display="none";
+    document.getElementById("table2").style.display="none";
+    document.getElementById("ans").style.display="none";
+    document.getElementById("ans2").style.display="none";
+    document.getElementById("ans3").style.display="none";
+}else if(b==null || b==""){
+    document.getElementById("box").style.display="none";
+    document.getElementById("table").style.display="none";
+    document.getElementById("table2").style.display="none";
+    document.getElementById("ans").style.display="none";
+    document.getElementById("ans2").style.display="none";
+    document.getElementById("ans3").style.display="none";
+}else if(c==null || c==""){
+    document.getElementById("box").style.display="none";
+    document.getElementById("table").style.display="none";
+    document.getElementById("table2").style.display="none";
+    document.getElementById("ans").style.display="none";
+    document.getElementById("ans2").style.display="none";
+    document.getElementById("ans3").style.display="none";
+}else if(d==null || d==""){
+    document.getElementById("box").style.display="none";
+    document.getElementById("table").style.display="none";
+    document.getElementById("table2").style.display="none";
+    document.getElementById("ans").style.display="none";
+    document.getElementById("ans2").style.display="none";
+    document.getElementById("ans3").style.display="none";
+  }
+}
+
+function solvings(){
+let a = document.sform.a.value;
+let b = document.sform.b.value;
+let c = document.sform.c.value;
+let d = document.sform.d.value;
+
+    document.getElementById("box").style.display="block";
+    document.getElementById("table").style.display="block";
+    document.getElementById("table2").style.display="block";
+    document.getElementById("ans").style.display="block";
+    document.getElementById("ans2").style.display="block";
+    document.getElementById("ans3").style.display="block";
+  
+if(a==null || a==""){
+    document.getElementById("box").style.display="none";
+    document.getElementById("table").style.display="none";
+    document.getElementById("table2").style.display="none";
+    document.getElementById("ans").style.display="none";
+    document.getElementById("ans2").style.display="none";
+    document.getElementById("ans3").style.display="none";
+}else if(b==null || b==""){
+    document.getElementById("box").style.display="none";
+    document.getElementById("table").style.display="none";
+    document.getElementById("table2").style.display="none";
+    document.getElementById("ans").style.display="none";
+    document.getElementById("ans2").style.display="none";
+    document.getElementById("ans3").style.display="none";
+}else if(c==null || c==""){
+    document.getElementById("box").style.display="none";
+    document.getElementById("table").style.display="none";
+    document.getElementById("table2").style.display="none";
+    document.getElementById("ans").style.display="none";
+    document.getElementById("ans2").style.display="none";
+    document.getElementById("ans3").style.display="none";
+}else if(d==null || d==""){
+    document.getElementById("box").style.display="none";
+    document.getElementById("table").style.display="none";
+    document.getElementById("table2").style.display="none";
+    document.getElementById("ans").style.display="none";
+    document.getElementById("ans2").style.display="none";
+    document.getElementById("ans3").style.display="none";
+  }
+}
+</script>
+</body>
+</html>

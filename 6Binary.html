@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 25px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 60px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 25px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 5px;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+@media(max-width: 320px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 250px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+@media(max-width: 375px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 250px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+@media(max-width: 435px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 250px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+@media(max-width: 1024px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 80px;
+  background: black;
+  width: 300px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+@media(max-width: 1440px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 80px;
+  background: black;
+  width: 300px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+@media(max-width: 2560px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 80px;
+  background: black;
+  width: 320px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Binary</title>
+</head>
+<body>
+    <fieldset class="box1">
+        
+    <form name="myform" oninput="return solve()">
+        
+       <p><span>Enter your number and the base</span></p>
+         <div class="spc">
+       <table class="calculator">
+         <tr>
+             <td colspan="5"><input type="number" name="t1" class="element"></td>
+             <td><input type="number" name="t2" class="element"></td>
+             <td><input type="number" name="t3" class="element"></td>
+         </tr>
+       </table>
+       
+       <table class="calculator">
+         <tr>
+             <td colspan="5"><input type="number" name="t5" class="element"></td>
+             <td colspan="5"><input type="number" name="t6" class="element"></td>
+             <td colspan="5"><input type="number" name="t7" class="element"></td>
+         </tr>
+       </table>
+       
+    <p><span>Base = </span> <input type="number" name="t4" class="element"></p>
+       </div>
+       
+           <div class="ans"><strong class="answer">= <span id="t4"></span><span><sub>10</sub></span></strong></div>
+        </form>
+       
+        </fieldset>
+        
+        
+<script>
+function solve(){
+let a = document.myform.t1.value;
+let b = document.myform.t2.value;
+let c = document.myform.t3.value;
+let d = document.myform.t5.value;
+let e = document.myform.t6.value;
+let f = document.myform.t7.value;
+let g = document.myform.t4.value;
+let h = Math.pow(g,0);
+let i = Math.pow(g,1);
+let j = Math.pow(g,2);
+let k = Math.pow(g,3);
+let l = Math.pow(g,4);
+let m = Math.pow(g,5);
+let n = a * m;
+let o = b * l;
+let p = c * k;
+let q = d * j;
+let r = e * i;
+let s = f * h;
+let t = n + o + p + q + r + s;
+let u = document.getElementById("t4").innerText=t;
+}
+</script>
+</body>
+</html>

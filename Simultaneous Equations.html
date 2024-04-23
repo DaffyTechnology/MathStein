@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1700px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 25px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+}
+@media(max-width: 320px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1700px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 25px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+  }
+}
+@media(max-width: 375px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1700px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 25px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+ }
+}
+@media(max-width: 435px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1700px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 25px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+ }
+}
+@media(max-width: 1024px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 2100px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 4px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 35px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 250px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 35px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+ }
+}
+@media(max-width: 1440px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 2100px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 4px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 35px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 240px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 25px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+ }
+}
+@media(max-width: 2560px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 2100px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 70px;
+    outline: none;
+    border-radius: 15px;
+    width: 250px;
+    border: 4px solid black;
+    font-size: 35px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 35px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 490px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 80px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 3px solid black;
+}
+.answer{
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 34px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 40px;
+}
+.btn{
+  height: 80px;
+  background: black;
+  width: 310px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 34px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 35px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+ }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Simultaneous Equations</title>
+</head>
+<body>
+    <fieldset class="box">
+     <div class="head">
+   <form name="sform" method="post" oninput="return solve()">
+    <table class="calculator">
+  <tr>
+    <td colspan="5"><br><strong class="word">ax</strong></br>
+    <input class="element" type="number" name="a" autocomplete="off"></td>
+    <td><br><strong class="word">by</strong></br><input type="number" class="element" name="b" id="bv"></td>
+    <td class="txt">=</td>
+    <td><br><strong class="word">c</strong></br><input type="number" class="element" name="e"></td>
+  </tr>
+
+      <table class="top">     
+  <tr>
+    <td colspan="5"><br><strong class="word">ax</strong></br><input class="element" type="number" name="c"></td>
+    <td><br><strong class="word">by</strong></br><input type="number" class="element" name="d"></td>
+    <td class="txt">=</td>
+    <td><br><strong class="word">c</strong></br><input type="number" class="element" name="f"></td>
+  </tr>
+  </table>
+  </div>
+              <div class="ans"><strong class="answer">X =<span id="x"></span></strong></div>
+
+           <div class="ans"><strong class="answer">Y =<span id="y"></span></strong></div>
+         </form>
+         
+    <p><button class="btn" onclick="return solvings()">Show Solvings</button></p>
+
+     <div class="ansbox" id="box1">
+    <p><span id="value1"></span><span>x</span> <span id="plus3">+</span> <span id="value2"></span><span>y</span> <span> = </span> <span id="value5"></span> <span> ....... (i)</span></p>
+    
+    <p><span id="value3"></span><span>x</span> <span id="plus3">+</span> <span id="value4"></span><span>y</span> <span> = </span> <span id="value6"></span> <span>....... (ii)</span></p>
+  
+   <div class="spc">
+  <p><span>To find x</span></p>
+  
+   <p><span id="valuea"></span><span>x</span> <span id="plus">+</span> <span id="valueb"></span><span>y</span> <span> = </span> <span id="valuee"></span> <span> × </span> <span id="valued2"></span></p>
+   
+   <p><span id="valuec"></span><span>x</span> <span id="plus">+</span><span id="valued"></span><span>y</span> <span> = </span> <span id="valuef"></span> <span> × </span> <span id="valueb2"></span></p>
+   
+   <p><span id="valuea2"></span><span>x</span> <span id="plus5">+</span> <s><span id="valueb3"></span><span>y</span></s> <span> = </span> <span id="valuee2"></span> <br><span>-</span></br> <span>
+       
+       
+   <p><span id="line"> <span id="valuea3"></span><span>x</span> <span id="plus5">+</span> <s><span id="valueb4"></span><span>y</span></s> <span> = </span> <span id="valuee3"></span> <span></span>
+   
+   <table class="ansbox2" id="box2">
+     <tr>
+   <td colspan="10"> <u> <s><span id="valuex"></span></s><span>x</span></u> <br><s><span id="divide"></span></s></br></td>
+   <td colspan="10"><span id="equal">=</span></td>
+   <td><u> <span id="valueef"></span></u> <br><span id="divide2"></span></br></p></td>
+   </tr>
+   </table>
+   
+   <p><span>x = </span><span id="xfinalans"></span></p>
+   
+   <div class="spc">
+   <p><span>For y</span></p>
+   <p><span id="a5"></span><span>x</span> <span id="plus2">+</span> <span id="b5"></span><span>y</span> <span> = </span> <span id="e5"></span> <span>×</span> <span id="c6"></span></p>
+   
+   <p><span id="c5"></span><span>x</span> <span id="plus2">+</span> <span id="d5"></span><span>y</span> <span> = </span> <span id="f5"></span> <span>×</span> <span id="a6"></span></p>
+   
+   <p><s><span id="a7"></span><span>x</span></s> <span id="plus4">+</span> <span id="b7"></span><span>y</span> <span> = </span> <span id="e7"></span> <br><span>-</span></br></p>
+   
+   <p><span id="line"> <s><span id="c7"></span><span>x</span></s> <span id="plus4">+</span> <span id="d7"></span><span>y</span> <span> = </span> <span id="f7"></span></span></p>
+   
+   <table class="ansbox2" id="box3">
+     <tr>
+   <td colspan="10"> <u> <s><span id="x1"></span></s><span>y</span></u> <br><s><span id="divide3"></span></s></br></td>
+   <td colspan="10"><span id="equal">=</span></td>
+   <td><u> <span id="x2"></span></u> <br><span id="divide4"></span></br></p></td>
+   </tr>
+   </table>
+   
+   <p><span>y = </span><span id="yfinalans"></span></p>
+       </div>
+
+   
+   
+    </fieldset>
+    
+    
+<script>
+function solve(){
+let a = document.sform.a.value;
+let b = document.sform.b.value;
+let e = document.sform.e.value;
+let c = document.sform.c.value;
+let d = document.sform.d.value;
+let f = document.sform.f.value;
+let g = a * d;
+let h = c * b;
+//j is the Det
+let j = g - h;
+let k = d * e;
+let l = f * b;
+let n = k - l;
+//o is equal to x
+let o = n / j;
+let p = document.getElementById("x").innerText=o;
+let q = f * a;
+let r = c * e;
+let s = q - r;
+let t = s / j;
+let u = document.getElementById("y").innerText=t;
+let v = document.getElementById("valuea").innerText=a;
+let w = document.getElementById("valueb").innerText=b;
+let x = document.getElementById("valuee").innerText=e;
+let y = document.getElementById("valuec").innerText=c;
+let z = document.getElementById("valued").innerText=d;
+let za = document.getElementById("valuef").innerText=f;
+let zb = document.getElementById("valued2").innerText=d;
+let zc = document.getElementById("valueb2").innerText=b;
+let zd = d * a;
+let zf = d * b;
+let zg = d * e;
+let zh = document.getElementById("valuea2").innerText=zd;
+let zi = document.getElementById("valueb3").innerText=zf;
+let zj = document.getElementById("valuee2").innerText=zg;
+let zk = c * b;
+let zl = d * b;
+let zm = f * b;
+let zn = document.getElementById("valuea3").innerText=zk;
+let zo = document.getElementById("valueb4").innerText=zl;
+let zp = document.getElementById("valuee3").innerText=zm;
+let zq = zd - zk;
+let zr = document.getElementById("valuex").innerText=zq;
+let zs = document.getElementById("divide").innerText=zq;
+let zt = zg - zm;
+let zu = document.getElementById("valueef").innerText=zt;
+let zv = document.getElementById("divide2").innerText=zq;
+let zw = zt / zq;
+let zx = document.getElementById("xfinalans").innerText=zw;
+let zy = document.getElementById("a5").innerText=a;
+let zz = document.getElementById("b5").innerText=b;
+let aa = document.getElementById("c6").innerText=c;
+let ab = document.getElementById("e5").innerText=e;
+let ac = document.getElementById("c5").innerText=c;
+let ad = document.getElementById("d5").innerText=d;
+let ae = document.getElementById("f5").innerText=f;
+let af = document.getElementById("a6").innerText=a;
+let ag = document.getElementById("value1").innerText=a;
+let ah = document.getElementById("value2").innerText=b;
+let ai = document.getElementById("value5").innerText=e;
+let aj = document.getElementById("value3").innerText=c;
+let ak = document.getElementById("value4").innerText=d;
+let al = document.getElementById("value6").innerText=f;
+let am = c * a;
+let an = c * b;
+let ao = c * e;
+let ap = document.getElementById("a7").innerText=am;
+let aq = document.getElementById("b7").innerText=an;
+let ar = document.getElementById("e7").innerText=ao;
+let as = a * c;
+let at = a * d;
+let au = a * f;
+let av = document.getElementById("c7").innerText=as;
+let aw = document.getElementById("d7").innerText=at;
+let ax = document.getElementById("f7").innerText=au;
+let ay = an - at;
+let az = ao - au;
+let ba = document.getElementById("x1").innerText=ay;
+let bb = document.getElementById("divide3").innerText=ay;
+let bc = document.getElementById("x2").innerText=az;
+let bd = document.getElementById("divide4").innerText=ay;
+let be = az / ay;
+let bf = document.getElementById("yfinalans").innerText=be;
+let sign = "-";
+
+if(b.includes(sign)){
+    document.getElementById("plus").style.display="none";
+    document.getElementById("plus2").style.display="none";
+    document.getElementById("plus3").style.display="none";
+    document.getElementById("plus4").style.display="none";
+    document.getElementById("plus5").style.display="none";
+}else if(d.includes(sign)){
+    document.getElementById("plus").style.display="none";
+    document.getElementById("plus2").style.display="none";
+    document.getElementById("plus3").style.display="none";
+    document.getElementById("plus4").style.display="none";
+    document.getElementById("plus5").style.display="none";
+}else if(b.includes!==sign){
+   document.getElementById("plus").style.color="black";
+   document.getElementById("plus2").style.color="black";
+   document.getElementById("plus3").style.color="black";
+   document.getElementById("plus4").style.color="black";
+   document.getElementById("plus5").style.color="black";
+}else if(d.includes!==sign){
+   document.getElementById("plus").style.color="black";
+   document.getElementById("plus2").style.color="black";
+   document.getElementById("plus3").style.color="black";
+   document.getElementById("plus4").style.color="black";
+   document.getElementById("plus5").style.color="black";
+  }
+  
+if(a==null || a==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+}else if(b==null || b==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+}else if(c==null || c==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+}else if(d==null || d==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+}else if(e==null || e==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+}else if(f==null || f==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+  }
+}
+
+function solvings(){
+let a = document.sform.a.value;
+let b = document.sform.b.value;
+let c = document.sform.c.value;
+let d = document.sform.d.value;
+let e = document.sform.e.value;
+let f = document.sform.f.value;
+
+    document.getElementById("box1").style.display="block";
+    document.getElementById("box2").style.display="block";
+    document.getElementById("box3").style.display="block";
+    
+if(a==null || a==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+}else if(b==null || b==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+}else if(c==null || c==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+}else if(d==null || d==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+}else if(e==null || e==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+}else if(f==null || f==""){
+    document.getElementById("box1").style.display="none";
+    document.getElementById("box2").style.display="none";
+    document.getElementById("box3").style.display="none";
+  }
+}
+</script>
+</body>
+</html>

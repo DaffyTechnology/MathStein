@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 25px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 60px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 25px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+.solvings{
+    display: none;
+}
+@media(max-width: 320px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 250px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+@media(max-width: 375px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 250px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+@media(max-width: 435px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 250px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+@media(max-width: 1024px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 80px;
+  background: black;
+  width: 300px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+@media(max-width: 1440px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 80px;
+  background: black;
+  width: 300px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+@media(max-width: 2560px){
+body{
+    background-color: #3498DB;
+}
+.box1{
+        height: 900px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+span{
+    font-size: 35px;
+}
+#t4{
+    margin-left: 15px;
+}
+.btn{
+  height: 80px;
+  background: black;
+  width: 320px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.element{
+        margin-bottom: 10px;
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+.spc{
+    margin-top: 20px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+.solvings{
+    display: none;
+ }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Binary</title>
+</head>
+<body>
+    <fieldset class="box1">
+        
+    <form name="myform" oninput="return solve()">
+        
+       <p><span>Enter your number and the base</span></p>
+         <div class="spc">
+       <table class="calculator">
+         <tr>
+             <td colspan="5"><input type="number" name="t1" class="element"></td>
+             <td><input type="number" name="t2" class="element"></td>
+         </tr>
+       </table>
+       
+    <p><span>Base = </span> <input type="number" name="t3" class="element"></p>
+       </div>
+       
+           <div class="ans"><strong class="answer">= <span id="t4"></span><span><sub>10</sub></span></strong></div>
+        </form>
+        
+   <p><button class="btn" onclick="return solvings()">Show Solvings</button></p>
+   
+      <table class="solvings" id="solving">
+          <tr>
+           <td colspan="5"> <span id="t5"></span><span><sup>1</sup> <span id="t6"></span><span><sup>0</sup></span><sub><span id="t7"></span></sub></span></td>
+          <td><span>=</span></td>
+          <td><span id="t8"></span> <span>×</span> <span id="t9"></span><sup><span>1</span></sup> <span>+</span> <span id="t10"></span> <span>×</span> <span id="t11"></span><sup><span>0</span></sup></td>
+          </tr>
+      </table>
+      
+      <table class="solvings" id="solving2">
+          <tr>
+              <td colspan="5"><span>=</span> <span id="t12"></span> <span>+</span> <span id="t13"></span> <span>= </span> <span id="t14"></span><sub><span>10</span></sub></td>
+          </tr>
+      </table>
+       
+        </fieldset>
+        
+        
+<script>
+function solve(){
+let a = document.myform.t1.value;
+let b = document.myform.t2.value;
+let c = document.myform.t3.value;
+let e = Math.pow(c,1);
+let f = Math.pow(c,0);
+let g = a * e;
+let h = b * f;
+let i = g + h;
+let j = document.getElementById("t4").innerText=i;
+let k = document.getElementById("t5").innerText=a;
+let l = document.getElementById("t6").innerText=b;
+let m = document.getElementById("t7").innerText=c;
+let n = document.getElementById("t8").innerText=a;
+let o = document.getElementById("t9").innerText=c;
+let p = document.getElementById("t10").innerText=b;
+let q = document.getElementById("t11").innerText=c;
+let r = document.getElementById("t12").innerText=g;
+let s = document.getElementById("t13").innerText=h;
+let t = document.getElementById("t14").innerText=i;
+
+if(a==null || a==""){
+  document.getElementById("solving").style.display="none";
+  document.getElementById("solving2").style.display="none";
+}else if(b==null || b==""){
+  document.getElementById("solving").style.display="none";
+  document.getElementById("solving2").style.display="none";
+}else if(c==null || c==""){
+  document.getElementById("solving").style.display="none";
+  document.getElementById("solving2").style.display="none";
+  }
+}
+
+function solvings(){
+let a = document.myform.t1.value;
+let b = document.myform.t2.value;
+let c = document.myform.t3.value;
+
+   document.getElementById("solving").style.display="block";
+   document.getElementById("solving2").style.display="block";
+   
+if(a==null || a==""){
+  document.getElementById("solving").style.display="none";
+  document.getElementById("solving2").style.display="none";
+}else if(b==null || b==""){
+  document.getElementById("solving").style.display="none";
+  document.getElementById("solving2").style.display="none";
+}else if(c==null || c==""){
+  document.getElementById("solving").style.display="none";
+  document.getElementById("solving2").style.display="none";
+  }
+}
+</script>
+</body>
+</html>

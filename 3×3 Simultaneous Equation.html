@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+    background: #3498DB;
+}
+.box{
+    height: 4900px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 70px;
+    outline: none;
+    border-radius: 15px;
+    width: 100px;
+    border: 4px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+.top{
+    margin-left: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 500px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 70px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 4px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y, #det, #z{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.sbox{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 450px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.box2{
+    height: 220px;
+    width: 220px;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+span{  
+    font-size: 25px;
+}
+#b2, #c2, #e2, #f2, #h2, #i2, #f3, #i3, #b4, #c3, #e3, #h3, #i3, #f4, #i4, #f5, #i5, #e5, #h5, #b8, #c7, #e6, #f6, #h6, #i6, #t3, #t5, #t8, #t10, #t13, #t15, #t39, #t40, #t42, #t43, #t45, #t46, #t49, #t51, #t54, #t56, #t59, #t61, #t85, #t86, #t88, #t89, #t91, #t92, #t95, #t97, #t100, #t102, #t105, #t107{
+    margin-left: 25px;
+}
+#box3{
+    height: 210px;
+    width: 40px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.box4{
+    height: 210px;
+    width: 170px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#box5{
+    height: 240px;
+    width: 220px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.space{
+    margin-top: 15px;
+}
+#down{
+    margin-left: 8px;
+}
+.answerbox{
+    display: none;
+}
+@media(max-width: 320px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 4900px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 65px;
+    outline: none;
+    border-radius: 15px;
+    width: 100px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+.top{
+    margin-left: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 420px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 70px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y, #det, #z{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.sbox{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 450px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.box2{
+    height: 220px;
+    width: 200px;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+span{  
+    font-size: 25px;
+}
+#b2, #c2, #e2, #f2, #h2, #i2, #f3, #i3, #b4, #c3, #e3, #h3, #i3, #f4, #i4, #f5, #i5, #e5, #h5, #b8, #c7, #e6, #f6, #h6, #i6, #t3, #t5, #t8, #t10, #t13, #t15, #t39, #t40, #t42, #t43, #t45, #t46, #t49, #t51, #t54, #t56, #t59, #t61, #t85, #t86, #t88, #t89, #t91, #t92, #t95, #t97, #t100, #t102, #t105, #t107{
+    margin-left: 25px;
+}
+#box3{
+    height: 210px;
+    width: 40px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.box4{
+    height: 210px;
+    width: 150px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#box5{
+    height: 240px;
+    width: 220px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.space{
+    margin-top: 15px;
+}
+#down{
+    margin-left: 8px;
+}
+.answerbox{
+    display: none;
+ }
+}
+@media(max-width: 375px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 4900px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 65px;
+    outline: none;
+    border-radius: 15px;
+    width: 100px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+.top{
+    margin-left: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 420px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 70px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y, #det, #z{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.sbox{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 450px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.box2{
+    height: 220px;
+    width: 200px;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+span{  
+    font-size: 25px;
+}
+#b2, #c2, #e2, #f2, #h2, #i2, #f3, #i3, #b4, #c3, #e3, #h3, #i3, #f4, #i4, #f5, #i5, #e5, #h5, #b8, #c7, #e6, #f6, #h6, #i6, #t3, #t5, #t8, #t10, #t13, #t15, #t39, #t40, #t42, #t43, #t45, #t46, #t49, #t51, #t54, #t56, #t59, #t61, #t85, #t86, #t88, #t89, #t91, #t92, #t95, #t97, #t100, #t102, #t105, #t107{
+    margin-left: 25px;
+}
+#box3{
+    height: 210px;
+    width: 40px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.box4{
+    height: 210px;
+    width: 150px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#box5{
+    height: 240px;
+    width: 200px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.space{
+    margin-top: 15px;
+}
+#down{
+    margin-left: 8px;
+}
+.answerbox{
+    display: none;
+ }
+}
+@media(max-width: 435px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 4900px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 65px;
+    outline: none;
+    border-radius: 15px;
+    width: 100px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+.top{
+    margin-left: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 420px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 70px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y, #det, #z{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.sbox{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 450px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.box2{
+    height: 220px;
+    width: 200px;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+span{  
+    font-size: 25px;
+}
+#b2, #c2, #e2, #f2, #h2, #i2, #f3, #i3, #b4, #c3, #e3, #h3, #i3, #f4, #i4, #f5, #i5, #e5, #h5, #b8, #c7, #e6, #f6, #h6, #i6, #t3, #t5, #t8, #t10, #t13, #t15, #t39, #t40, #t42, #t43, #t45, #t46, #t49, #t51, #t54, #t56, #t59, #t61, #t85, #t86, #t88, #t89, #t91, #t92, #t95, #t97, #t100, #t102, #t105, #t107{
+    margin-left: 25px;
+}
+#box3{
+    height: 210px;
+    width: 40px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.box4{
+    height: 210px;
+    width: 150px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#box5{
+    height: 240px;
+    width: 200px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.space{
+    margin-top: 15px;
+}
+#down{
+    margin-left: 8px;
+}
+.answerbox{
+    display: none;
+ }
+}
+@media(max-width: 1024px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 4900px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 70px;
+    outline: none;
+    border-radius: 15px;
+    width: 120px;
+    border: 4px solid black;
+    font-size: 35px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+.top{
+    margin-left: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 500px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 70px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 3px solid black;
+}
+.answer{
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y, #det, #z{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 40px;
+}
+.sbox{
+    border: 4px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 450px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 300px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.box2{
+    height: 220px;
+    width: 220px;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+span{  
+    font-size: 35px;
+}
+#b2, #c2, #e2, #f2, #h2, #i2, #f3, #i3, #b4, #c3, #e3, #h3, #i3, #f4, #i4, #f5, #i5, #e5, #h5, #b8, #c7, #e6, #f6, #h6, #i6, #t3, #t5, #t8, #t10, #t13, #t15, #t39, #t40, #t42, #t43, #t45, #t46, #t49, #t51, #t54, #t56, #t59, #t61, #t85, #t86, #t88, #t89, #t91, #t92, #t95, #t97, #t100, #t102, #t105, #t107{
+    margin-left: 25px;
+}
+#box3{
+    height: 210px;
+    width: 40px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.box4{
+    height: 210px;
+    width: 170px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#box5{
+    height: 240px;
+    width: 220px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.space{
+    margin-top: 15px;
+}
+#down{
+    margin-left: 8px;
+}
+.answerbox{
+    display: none;
+ }
+}
+@media(max-width: 1440px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 4900px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 70px;
+    outline: none;
+    border-radius: 15px;
+    width: 120px;
+    border: 4px solid black;
+    font-size: 35px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+.top{
+    margin-left: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 500px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 70px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 3px solid black;
+}
+.answer{
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y, #det, #z{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 40px;
+}
+.sbox{
+    border: 4px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 450px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 300px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.box2{
+    height: 220px;
+    width: 220px;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+span{  
+    font-size: 35px;
+}
+#b2, #c2, #e2, #f2, #h2, #i2, #f3, #i3, #b4, #c3, #e3, #h3, #i3, #f4, #i4, #f5, #i5, #e5, #h5, #b8, #c7, #e6, #f6, #h6, #i6, #t3, #t5, #t8, #t10, #t13, #t15, #t39, #t40, #t42, #t43, #t45, #t46, #t49, #t51, #t54, #t56, #t59, #t61, #t85, #t86, #t88, #t89, #t91, #t92, #t95, #t97, #t100, #t102, #t105, #t107{
+    margin-left: 25px;
+}
+#box3{
+    height: 220px;
+    width: 40px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.box4{
+    height: 220px;
+    width: 170px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#box5{
+    height: 240px;
+    width: 220px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.space{
+    margin-top: 15px;
+}
+#down{
+    margin-left: 8px;
+}
+.answerbox{
+    display: none;
+ }
+}
+@media(max-width: 2560px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 4900px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 80px;
+    outline: none;
+    border-radius: 15px;
+    width: 130px;
+    border: 4px solid black;
+    font-size: 35px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+.top{
+    margin-left: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 520px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 80px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 3px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+#x, #y, #det, #z{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 45px;
+}
+.sbox{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 4px solid white;
+    width: 450px;
+}
+.btn{
+  height: 80px;
+  background: black;
+  width: 310px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.box2{
+    height: 220px;
+    width: 220px;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+span{  
+    font-size: 35px;
+}
+#b2, #c2, #e2, #f2, #h2, #i2, #f3, #i3, #b4, #c3, #e3, #h3, #i3, #f4, #i4, #f5, #i5, #e5, #h5, #b8, #c7, #e6, #f6, #h6, #i6, #t3, #t5, #t8, #t10, #t13, #t15, #t39, #t40, #t42, #t43, #t45, #t46, #t49, #t51, #t54, #t56, #t59, #t61, #t85, #t86, #t88, #t89, #t91, #t92, #t95, #t97, #t100, #t102, #t105, #t107{
+    margin-left: 25px;
+}
+#box3{
+    height: 210px;
+    width: 40px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.box4{
+    height: 210px;
+    width: 170px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#box5{
+    height: 240px;
+    width: 220px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.space{
+    margin-top: 15px;
+}
+#down{
+    margin-left: 8px;
+}
+.answerbox{
+    display: none;
+ }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>3×3 Simultaneous Equations</title>
+</head>
+<body>
+    <fieldset class="box">
+     <div class="head">
+   <form name="sform" oninput="return solve()">
+       <fieldset class="sbox">
+    <table class="calculator">
+  <tr>
+    <td colspan="5"><br><strong class="word">a<sub>11</sub></strong></br>
+    <input class="element" type="number" name="a" autocomplete="off"></td>
+    <td><br><strong class="word">a<sub>12</sub></strong></br><input type="number" class="element" name="b" autocomplete="off"></td>
+    <td><br><strong class="word">a<sub>13</sub></strong></br><input type="number" class="element" name="c" autocomplete="off"></td>
+    <td class="txt">=</td>
+    <td><br><strong class="word">a<sub>14</sub></strong></br><input type="number" class="element" name="j" autocomplete="off"></td>
+  </tr>
+
+      <table class="top">     
+  <tr>
+    <td colspan="5"><br><strong class="word">a<sub>21</sub></strong></br><input class="element" type="number" name="d" autocomplete="off"></td>
+    <td><br><strong class="word">a<sub>22</sub></strong></br><input type="number" class="element" name="e" autocomplete="off"></td>
+    <td><br><strong class="word">a<sub>23</sub></strong></br><input type="number" class="element" name="f" autocomplete="off"></td>
+    <td class="txt">=</td>
+    <td><br><strong class="word">a<sub>24</sub></strong></br><input type="number" class="element" name="k" autocomplete="off"></td>
+  </tr>
+  
+        <table class="top">     
+  <tr>
+    <td colspan="5"><br><strong class="word">a<sub>31</sub></strong></br><input class="element" type="number" name="g" autocomplete="off"></td>
+    <td><br><strong class="word">a<sub>32</sub></strong></br><input type="number" class="element" name="h" autocomplete="off"></td>
+    <td><br><strong class="word">a<sub>33</sub></strong></br><input type="number" class="element" name="i" autocomplete="off"></td>
+    <td class="txt">=</td>
+    <td><br><strong class="word">a<sub>34</sub></strong></br><input type="number" class="element" name="l" autocomplete="off"></td>
+  </tr>
+  </table>
+  </div>
+  
+     <div class="ans"><strong class="answer">Determinant =<span id="det"></span></strong></div>
+     
+              <div class="ans"><strong class="answer">X =<span id="x"></span></strong></div>
+
+           <div class="ans"><strong class="answer">Y =<span id="y"></span></strong></div>
+           
+     <div class="ans"><strong class="answer">Z =<span id="z"></span></strong></div>
+     </form>
+    
+     
+    <p><button class="btn" onclick="return solvings()">Show Solvings</button></p>
+     
+     
+    <div class="answerbox" id="answerbox">
+     <table>
+        <tr>
+            <td colspan="5"><fieldset class="box2"><span id="a1"></span> <span id="b2"></span> <span id="c2"></span> <p><br> <span id="d4"></span> <span id="e2"></span> <span id="f2"></span></br></p> <br><span id="g2"></span> <span id="h2"></span> <span id="i2"></span></br></fieldset></td>
+            <td><fieldset id="box3"><span>x</span> <div class="space"><br><span id="b3">y</span></br></div> <br><div class="space"><span>z</span></div></br></fieldset></td>
+            <td><span>=</span></td>
+            <td><fieldset id="box3"><span id="j2"></span> <p><br><span id="k2"></span></br></p> <br><span id="l2"></span></br></fieldset></td>
+        </tr>
+    </table>
+      
+      <table>
+          <tr>
+              <td colspan="5"><fieldset id="box5"><span id="a2"></span> <span id="b4"></span> <span id="c3"></span> <p><br><span id="d5"></span> <span id="e3"></span> <span id="f3"></span></br></p> <br> <span id="g3"></span> <span id="h3"></span> <span id="i3"></span></br></fieldset></td>
+          </tr>
+      </table>
+      
+      <table>
+          <tr>
+      <td colspan="5"><p><span id="a3"></span></td>
+      <td><fieldset class="box4">
+         <span id="e4"></span> <span id="f4"></span> <p><br><span id="h4"></span> <span id="i4"></span></br></p>
+      </fieldset></td>
+      <td><span>-</span></td>
+      <td><span id="b5"></span></td>
+      <td><fieldset class="box4"> <span id="d6"></span> <span id="f5"></span> <p><br><span id="g4"></span> <span id="i5"></span> </br></p>
+      </fieldset></td>
+      <td><span>+</span></td>
+      <td><span id="c4"></span></td>
+      <td><fieldset class="box4"> <span id="d7"></span> <span id="e5"></span> <p><br><span id="g5"></span> <span id="h5"></span></br></p></fieldset></td>
+          </tr>
+      </table>
+      
+      <table>
+          <tr>
+              <td><span id="a4"></span> <span>(</span> <span id="ie"></span> <span>-</span> <span id="hf"></span> <span>)</span></td>
+              <td><span>- </span> <span id="b6"></span> <span>(</span> <span id="di"></span> <span>- </span> <span id="fg"></span> <span>)</span> <span>+</span> <span id="c5"></span> <span>(</span> <span id="hd"></span> <span>- </span> <span id="ge"></span> <span>)</span></td>
+          </tr>
+      </table>
+      
+      <table>
+          <tr>
+              <td><span id="a5"></span> <span>(</span> <span id="q"></span> <span>)</span> <span>- </span> <span id="b7"></span> <span>(</span> <span id="s"></span> <span>)</span> <span>+ </span> <span id="c6"></span> <span>(</span> <span id="u"></span> <span>)</span></td>
+          </tr>
+      </table>
+      
+      <table>
+          <tr>
+              <td><span>= </span> <span id="r"></span> <span>+ </span> <span id="t"></span> <span>+ </span> <span id="v"></span></td>
+          </tr>         
+      </table>
+      
+      <table>
+          <tr>
+              <td><span>Determinant = </span> <span id="w"></span></td>
+          </tr>
+      </table>
+      
+      <table>
+          <tr>
+              <p><span>To find x</span></p>
+              <td colspan="5"><fieldset id="box5"><span id="j3"></span> <span id="b8"></span> <span id="c7"></span> <p><br><span id="k3"></span> <span id="e6"></span> <span id="f6"></span></br></p> <br> <span id="l3"></span> <span id="h6"></span> <span id="i6"></span></br></fieldset></td>
+          </tr>
+      </table>
+      
+      <table>
+          <tr>
+      <td colspan="5"><p><span id="1"></span></td>
+      <td><fieldset class="box4">
+         <span id="2"></span> <span id="t3"></span> <p><br><span id="4"></span> <span id="t5"></span></br></p>
+      </fieldset></td>
+      <td><span>-</span></td>
+      <td><span id="6"></span></td>
+      <td><fieldset class="box4"> <span id="7"></span> <span id="t8"></span> <p><br><span id="9"></span> <span id="t10"></span> </br></p>
+      </fieldset></td>
+      <td><span>+</span></td>
+      <td><span id="11"></span></td>
+      <td><fieldset class="box4"> <span id="12"></span> <span id="t13"></span> <p><br><span id="14"></span> <span id="t15"></span></br></p></fieldset></td>
+          </tr>
+      </table>
+      
+            <table>
+          <tr>
+              <td><span id="t16"></span> <span>(</span> <span id="t17"></span> <span>-</span> <span id="t18"></span> <span>)</span></td>
+              <td><span>- </span> <span id="t19"></span> <span>(</span> <span id="t20"></span> <span>- </span> <span id="t21"></span> <span>)</span> <span>+</span> <span id="t22"></span> <span>(</span> <span id="t23"></span> <span>- </span> <span id="t24"></span> <span>)</span></td>
+          </tr>
+      </table>
+      
+            <table>
+          <tr>
+              <td><span id="t25"></span> <span>(</span> <span id="t26"></span> <span>)</span> <span>- </span> <span id="t27"></span> <span>(</span> <span id="t28"></span> <span>)</span> <span>+ </span> <span id="t29"></span> <span>(</span> <span id="t30"></span> <span>)</span></td>
+          </tr>
+      </table>
+      
+            <table>
+          <tr>
+              <td><span>=</span> <span id="t31"></span> <span>+ </span> <span id="t32"></span> <span>+ </span> <span id="t33"></span></td>
+          </tr>         
+      </table>
+      
+            <table>
+          <tr>
+              <td><span>Dx = </span> <span id="t34"></span></td>
+          </tr>
+      </table>
+      
+       <table>
+          <tr>
+              <td><span>x = </span></td>
+              <td><u><span>Dx</span></u><br><span id="down">D</span></br></td>
+              <td><span>=</span></td>
+              <td><u><span id="t35"></span></u><br><span id="t36"></span></br></td>
+              <td><span> = </span> <span id="t37"></span></td>
+          </tr>
+      </table>
+      
+      <p><span>To find y</span></p>
+      <table id="box13">
+          <tr
+              <td colspan="5"><fieldset id="box5"><span id="t38"></span> <span id="t39"></span> <span id="t40"></span> <p><br><span id="t41"></span> <span id="t42"></span> <span id="t43"></span></br></p> <br> <span id="t44"></span> <span id="t45"></span> <span id="t46"></span></br></fieldset></td>
+          </tr>
+      </table>
+      
+       <table>
+          <tr>
+      <td colspan="5"><p><span id="t47"></span></td>
+      <td><fieldset class="box4">
+         <span id="t48"></span> <span id="t49"></span> <p><br><span id="t50"></span> <span id="t51"></span></br></p>
+      </fieldset></td>
+      <td><span>-</span></td>
+      <td><span id="t52"></span></td>
+      <td><fieldset class="box4"> <span id="t53"></span> <span id="t54"></span> <p><br><span id="t55"></span> <span id="t56"></span> </br></p>
+      </fieldset></td>
+      <td><span>+</span></td>
+      <td><span id="t57"></span></td>
+      <td><fieldset class="box4"> <span id="t58"></span> <span id="t59"></span> <p><br><span id="t60"></span> <span id="t61"></span></br></p></fieldset></td>
+          </tr>
+      </table>
+      
+         <table>
+          <tr>
+              <td><span id="t62"></span> <span>(</span> <span id="t63"></span> <span>-</span> <span id="t64"></span> <span>)</span></td>
+              <td><span>- </span> <span id="t65"></span> <span>(</span> <span id="t66"></span> <span>- </span> <span id="t67"></span> <span>)</span> <span>+</span> <span id="t68"></span> <span>(</span> <span id="t69"></span> <span>- </span> <span id="t70"></span> <span>)</span></td>
+          </tr>
+      </table>
+      
+        <table>
+          <tr>
+              <td><span id="t71"></span> <span>(</span> <span id="t72"></span> <span>)</span> <span>- </span> <span id="t73"></span> <span>(</span> <span id="t74"></span> <span>)</span> <span>+ </span> <span id="t75"></span> <span>(</span> <span id="t76"></span> <span>)</span></td>
+          </tr>
+      </table>
+      
+       <table>
+          <tr>
+              <td><span>= </span> <span id="t77"></span> <span>+ </span> <span id="t78"></span> <span>+ </span> <span id="t79"></span></td>
+          </tr>         
+      </table>
+      
+      <table>
+          <tr>
+          <td><span>Dy = <span id="t80"></span></span></td>
+          </tr>
+      </table>
+      
+       <table>
+          <tr>
+              <td><span>y = </span></td>
+              <td><u><span>Dy</span></u><br><span id="down">D</span></br></td>
+              <td><span>=</span></td>
+              <td><u><span id="t81"></span></u><br><span id="t82"></span></br></td>
+              <td><span> = </span> <span id="t83"></span></td>
+          </tr>
+      </table>
+      
+            <table>
+          <tr>
+              <p><span>To find z</span></p>
+              <td colspan="5"><fieldset id="box5"><span id="t84"></span> <span id="t85"></span> <span id="t86"></span> <p><br><span id="t87"></span> <span id="t88"></span> <span id="t89"></span></br></p> <br> <span id="t90"></span> <span id="t91"></span> <span id="t92"></span></br></fieldset></td>
+          </tr>
+      </table>
+      
+      <table>
+          <tr>
+      <td colspan="5"><p><span id="t93"></span></td>
+      <td><fieldset class="box4">
+         <span id="t94"></span> <span id="t95"></span> <p><br><span id="t96"></span> <span id="t97"></span></br></p>
+      </fieldset></td>
+      <td><span>-</span></td>
+      <td><span id="t98"></span></td>
+      <td><fieldset class="box4"> <span id="t99"></span> <span id="t100"></span> <p><br><span id="t101"></span> <span id="t102"></span> </br></p>
+      </fieldset></td>
+      <td><span>+</span></td>
+      <td><span id="t103"></span></td>
+      <td><fieldset class="box4"> <span id="t104"></span> <span id="t105"></span> <p><br><span id="t106"></span> <span id="t107"></span></br></p></fieldset></td>
+          </tr>
+      </table>
+      
+      <table>
+          <tr>
+              <td><span id="t108"></span> <span>(</span> <span id="t109"></span> <span>-</span> <span id="t110"></span> <span>)</span></td>
+              <td><span>- </span> <span id="t111"></span> <span>(</span> <span id="t112"></span> <span>- </span> <span id="t113"></span> <span>)</span> <span>+</span> <span id="t114"></span> <span>(</span> <span id="t115"></span> <span>- </span> <span id="t116"></span> <span>)</span></td>
+          </tr>
+      </table>
+      
+      <table>
+          <tr>
+              <td><span id="t117"></span> <span>(</span> <span id="t118"></span> <span>)</span> <span>- </span> <span id="t119"></span> <span>(</span> <span id="t120"></span> <span>)</span> <span>+ </span> <span id="t121"></span> <span>(</span> <span id="t122"></span> <span>)</span></td>
+          </tr>
+      </table>
+      
+       <table>
+          <tr>
+              <td><span>=</span> <span id="t123"></span> <span>+ </span> <span id="t124"></span> <span>+ </span> <span id="t125"></span></td>
+          </tr>         
+      </table>
+      
+      <table>
+          <tr>
+              <td><span>z = </span></td>
+              <td><u><span>Dz</span></u><br><span id="down">D</span></br></td>
+              <td><span>=</span></td>
+              <td><u><span id="t126"></span></u><br><span id="t127"></span></br></td>
+              <td><span> = </span> <span id="t128"></span></td>
+          </tr>
+      </table>
+      </div>
+      
+    </div>
+     
+    </fieldset>
+    
+    
+    
+<script>
+function solve(){
+let a = document.sform.a.value;
+let b = document.sform.b.value;
+let c = document.sform.c.value;
+let j = document.sform.j.value;
+let d = document.sform.d.value;
+let e = document.sform.e.value;
+let f = document.sform.f.value;
+let k = document.sform.k.value;
+let g = document.sform.g.value;
+let h = document.sform.h.value;
+let i = document.sform.i.value;
+let l = document.sform.l.value;
+let ja = i * e;
+let ka = h * f;
+let m = d * i;
+let n = f * g;
+let o = h * d;
+let p = g * e;
+let q = ja - ka;
+let r = a * q;
+let s = m - n;
+let sa = -1 * b;
+let t = sa * s;
+let u = o - p;
+let v = c * u;
+let w = r + t + v;
+let y = document.getElementById("det").innerText=w;
+let z = j * q;
+let za = i * k;
+let zb = l * f;
+let zc = za - zb;
+let zd = sa * zc;
+let ze = h * k;
+let zf = l * e;
+let zg = ze - zf;
+let zh = c * zg;
+let zi = z + zd + zh;
+let zj = zi / w;
+let zk = document.getElementById("x").innerText=zj;
+let zl = a * zc;
+let zm = -1 * j;
+let zn = zm * s;
+let zo = l * d;
+let zp = g * k;
+let zq = zo - zp;
+let zr = c * zq;
+let zs = zl + zn + zr;
+let zt = zs / w;
+let zu = document.getElementById("y").innerText=zt;
+let zv = zf - ze;
+let yb = a * zv;
+let zw = zo - zp;
+let yc = sa * zw;
+let zx = o - p;
+let yd = j * zx;
+let zy = yb + yc + yd;
+let zz = zy / w;
+let ya = document.getElementById("z").innerText=zz;
+let yy = document.getElementById("a1").innerText=a;
+let yyy = document.getElementById("b2").innerText=b;
+let yyyy = document.getElementById("c2").innerText=c;
+let yf = document.getElementById("e2").innerText=e;
+let yk = document.getElementById("a2").innerText=a;
+let yl = document.getElementById("e3").innerText=e;
+let ym = document.getElementById("f3").innerText=f;
+let yn = document.getElementById("h3").innerText=h;
+let yo = document.getElementById("i4").innerText=i;
+let yp = document.getElementById("b2").innerText=b;
+let yq = document.getElementById("c2").innerText=c;
+let yr = document.getElementById("d4").innerText=d;
+let ys = document.getElementById("e2").innerText=e;
+let yt = document.getElementById("f2").innerText=f;
+let yu = document.getElementById("g2").innerText=g;
+let yv = document.getElementById("h2").innerText=h;
+let yw = document.getElementById("i2").innerText=i;
+let yx = document.getElementById("j2").innerText=j;
+let xa = document.getElementById("k2").innerText=k;
+let xb = document.getElementById("l2").innerText=l;
+let xc = document.getElementById("a3").innerText=a;
+let xd = document.getElementById("b4").innerText=b;
+let xe = document.getElementById("c3").innerText=c;
+let xf = document.getElementById("d5").innerText=d;
+let xg = document.getElementById("e4").innerText=e;
+let xh = document.getElementById("f3").innerText=f;
+let xi = document.getElementById("g3").innerText=g;
+let xj = document.getElementById("h3").innerText=h;
+let xk = document.getElementById("i3").innerText=i;
+let xl = document.getElementById("f4").innerText=f;
+let xm = document.getElementById("h4").innerText=h;
+let xn = document.getElementById("b5").innerText=b;
+let xo = document.getElementById("d6").innerText=d;
+let xp = document.getElementById("f5").innerText=f;
+let xq = document.getElementById("g4").innerText=g;
+let xr = document.getElementById("i5").innerText=i;
+let xs = document.getElementById("c4").innerText=c;
+let xt = document.getElementById("d7").innerText=d;
+let xu = document.getElementById("e5").innerText=e;
+let xv = document.getElementById("g5").innerText=g;
+let xw = document.getElementById("h5").innerText=h;
+let xx = document.getElementById("a4").innerText=a;
+let xy = document.getElementById("ie").innerText=ja;
+let xz = document.getElementById("hf").innerText=ka;
+let wa = document.getElementById("b6").innerText=b;
+let wb = document.getElementById("di").innerText=m;
+let wc = document.getElementById("fg").innerText=n;
+let wd = document.getElementById("c5").innerText=c;
+let we = document.getElementById("hd").innerText=o;
+let wf = document.getElementById("ge").innerText=p;
+let wg = document.getElementById("a5").innerText=a;
+let wh = document.getElementById("q").innerText=q;
+let wi = document.getElementById("b7").innerText=b;
+let wj = document.getElementById("s").innerText=s;
+let wk = document.getElementById("c6").innerText=c;
+let wl = document.getElementById("u").innerText=u;
+let wm = document.getElementById("r").innerText=r;
+let wn = document.getElementById("t").innerText=t;
+let wo = document.getElementById("v").innerText=v;
+let wp = document.getElementById("w").innerText=w;
+let wq = document.getElementById("j3").innerText=j;
+let wr = document.getElementById("b8").innerText=b;
+let ws = document.getElementById("c7").innerText=c;
+let wt = document.getElementById("k3").innerText=k;
+let wu = document.getElementById("e6").innerText=e;
+let wv = document.getElementById("f6").innerText=f;
+let ww = document.getElementById("l3").innerText=l;
+let wx = document.getElementById("h6").innerText=h;
+let wy = document.getElementById("i6").innerText=i;
+let wz = document.getElementById("1").innerText=j;
+let va = document.getElementById("2").innerText=e;
+let vb = document.getElementById("t3").innerText=f;
+let vc = document.getElementById("4").innerText=h;
+let vd = document.getElementById("t5").innerText=i;
+let ve = document.getElementById("6").innerText=b;
+let vf = document.getElementById("7").innerText=k;
+let vg = document.getElementById("t8").innerText=f;
+let vh = document.getElementById("9").innerText=l;
+let vi = document.getElementById("t10").innerText=i;
+let vj = document.getElementById("11").innerText=c;
+let vk = document.getElementById("12").innerText=k;
+let vl = document.getElementById("t13").innerText=e;
+let vm = document.getElementById("14").innerText=l;
+let vn = document.getElementById("t15").innerText=h;
+let vo = document.getElementById("t16").innerText=j;
+let vp = document.getElementById("t17").innerText=ja;
+let vq = document.getElementById("t18").innerText=ka;
+let vr = document.getElementById("t19").innerText=b;
+let vs = document.getElementById("t20").innerText=za;
+let vt = document.getElementById("t21").innerText=zb;
+let vu = document.getElementById("t22").innerText=c;
+let vv = document.getElementById("t23").innerText=ze;
+let vw = document.getElementById("t24").innerText=zf;
+let vx = document.getElementById("t25").innerText=j;
+let vy = document.getElementById("t26").innerText=q;
+let vz = document.getElementById("t27").innerText=b;
+let ua = document.getElementById("t28").innerText=zc;
+let ub = document.getElementById("t29").innerText=c;
+let uc = document.getElementById("t30").innerText=zg;
+let ud = document.getElementById("t31").innerText=z;
+let ue = document.getElementById("t32").innerText=zd;
+let uf = document.getElementById("t33").innerText=zh;
+let ug = document.getElementById("t34").innerText=zi;
+let uh = document.getElementById("t35").innerText=zi;
+let ui = document.getElementById("t36").innerText=w;
+let uj = document.getElementById("t37").innerText=zj;
+let uk = document.getElementById("t38").innerText=a;
+let ul = document.getElementById("t39").innerText=j;
+let um = document.getElementById("t40").innerText=c;
+let un = document.getElementById("t41").innerText=d;
+let uo = document.getElementById("t42").innerText=k;
+let up = document.getElementById("t43").innerText=f;
+let uq = document.getElementById("t44").innerText=g;
+let ur = document.getElementById("t45").innerText=l;
+let us = document.getElementById("t46").innerText=i;
+let ut = document.getElementById("t47").innerText=a;
+let uu = document.getElementById("t48").innerText=k;
+let uv = document.getElementById("t49").innerText=f;
+let uw = document.getElementById("t50").innerText=l;
+let ux = document.getElementById("t51").innerText=i;
+let uy = document.getElementById("t52").innerText=j;
+let uz = document.getElementById("t53").innerText=d;
+let ta = document.getElementById("t54").innerText=f;
+let tb = document.getElementById("t55").innerText=g;
+let tc = document.getElementById("t56").innerText=i;
+let td = document.getElementById("t57").innerText=c;
+let te = document.getElementById("t58").innerText=d;
+let tf = document.getElementById("t59").innerText=k;
+let tg = document.getElementById("t60").innerText=g;
+let th = document.getElementById("t61").innerText=l;
+let ti = document.getElementById("t62").innerText=a;
+let tj = document.getElementById("t63").innerText=za;
+let tk = document.getElementById("t64").innerText=zb;
+let tl = document.getElementById("t65").innerText=j;
+let tm = document.getElementById("t66").innerText=m;
+let tn = document.getElementById("t67").innerText=n;
+let to = document.getElementById("t68").innerText=c;
+let tp = document.getElementById("t69").innerText=zo;
+let tq = document.getElementById("t70").innerText=zp;
+let tr = document.getElementById("t71").innerText=a;
+let ts = document.getElementById("t72").innerText=zc;
+let tt = document.getElementById("t73").innerText=j;
+let tu = document.getElementById("t74").innerText=s;
+let tv = document.getElementById("t75").innerText=c;
+let tw = document.getElementById("t76").innerText=zq;
+let tx = document.getElementById("t77").innerText=zl;
+let ty = document.getElementById("t78").innerText=zn;
+let tz = document.getElementById("t79").innerText=zr;
+let ra = document.getElementById("t80").innerText=zs;
+let rb = document.getElementById("t81").innerText=zs;
+let rc = document.getElementById("t82").innerText=w;
+let rd = document.getElementById("t83").innerText=zt;
+let re = document.getElementById("t84").innerText=a;
+let rf = document.getElementById("t85").innerText=b;
+let rg = document.getElementById("t86").innerText=j;
+let rh = document.getElementById("t87").innerText=d;
+let ri = document.getElementById("t88").innerText=e;
+let rj = document.getElementById("t89").innerText=k;
+let rk = document.getElementById("t90").innerText=g;
+let rl = document.getElementById("t91").innerText=h;
+let rm = document.getElementById("t92").innerText=l;
+let rn = document.getElementById("t93").innerText=a;
+let ro = document.getElementById("t94").innerText=e;
+let rp = document.getElementById("t95").innerText=k;
+let rq = document.getElementById("t96").innerText=h;
+let rr = document.getElementById("t97").innerText=l;
+let rs = document.getElementById("t98").innerText=b;
+let rt = document.getElementById("t99").innerText=d;
+let ru = document.getElementById("t100").innerText=k;
+let rv = document.getElementById("t101").innerText=g;
+let rw = document.getElementById("t102").innerText=l;
+let rx = document.getElementById("t103").innerText=j;
+let ry = document.getElementById("t104").innerText=d;
+let rz = document.getElementById("t105").innerText=e;
+let qa = document.getElementById("t106").innerText=g;
+let qb = document.getElementById("t107").innerText=h;
+let qc = document.getElementById("t108").innerText=a;
+let qd = document.getElementById("t109").innerText=zf;
+let qe = document.getElementById("t110").innerText=ze;
+let qf = document.getElementById("t111").innerText=b;
+let qg = document.getElementById("t112").innerText=zo;
+let qh = document.getElementById("t113").innerText=zp;
+let qi = document.getElementById("t114").innerText=j;
+let qj = document.getElementById("t115").innerText=o;
+let qk = document.getElementById("t116").innerText=p;
+let ql = document.getElementById("t117").innerText=a;
+let qm = document.getElementById("t118").innerText=zv;
+let qn = document.getElementById("t119").innerText=b;
+let qo = document.getElementById("t120").innerText=zw;
+let qp = document.getElementById("t121").innerText=j;
+let qq = document.getElementById("t122").innerText=zx;
+let qr = document.getElementById("t123").innerText=yb;
+let qs = document.getElementById("t124").innerText=yc;
+let qt = document.getElementById("t125").innerText=yd;
+let qu = document.getElementById("t126").innerText=zy;
+let qv = document.getElementById("t127").innerText=w;
+let qw = document.getElementById("t128").innerText=zz;
+
+if(a==null || a==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(b==null || b==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(c==null || c==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(d==null || d==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(e==null || e==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(f==null || f==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(g==null || g==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(h==null || h==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(i==null || i==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(j==null || j==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(k==null || k==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(l==null || l==""){
+    document.getElementById("answerbox").style.display="none";
+  }
+}
+
+function solvings(){
+let a = document.sform.a.value;
+let b = document.sform.b.value;
+let c = document.sform.c.value;
+let j = document.sform.j.value;
+let d = document.sform.d.value;
+let e = document.sform.e.value;
+let f = document.sform.f.value;
+let k = document.sform.k.value;
+let g = document.sform.g.value;
+let h = document.sform.h.value;
+let i = document.sform.i.value;
+let l = document.sform.l.value;
+    document.getElementById("answerbox").style.display="block";
+    
+if(a==null || a==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(b==null || b==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(c==null || c==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(d==null || d==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(e==null || e==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(f==null || f==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(g==null || g==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(h==null || h==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(i==null || i==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(j==null || j==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(k==null || k==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(l==null || l==""){
+    document.getElementById("answerbox").style.display="none";
+  }
+}
+</script>
+</body>
+</html>

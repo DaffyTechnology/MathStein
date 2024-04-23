@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 50px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 25px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 25px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 50px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 25px;
+   background: white;
+   margin-left: 40px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 60px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 25px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 65px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#four{
+    margin-left: 10px;
+}
+@media(max-width: 320px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+   margin-left: 30px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 60px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 420px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+@media(max-width: 375px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 25px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 25px;
+   background: white;
+   margin-left: 30px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 60px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 420px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+@media(max-width: 435px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+   margin-left: 30px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 60px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 420px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+@media(max-width: 1024px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+   margin-left: 40px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 430px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 120px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+@media(max-width: 1440px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+   margin-left: 40px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 450px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 120px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+@media(max-width: 2560px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+   margin-left: 40px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 450px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 140px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Conversion Of Pressure Unit</title>
+    <fieldset class="box">
+     <form name="form" oninput="return solve()">
+        <table>
+            <tr>
+            <td colspan="5">
+       <p><select class="element" name="one">
+       <option value="#">Pressure</option>  
+       <option value="2">Atmosphere (atm)</option>
+       <option value="16">Pascal (Pa)</option>
+       <option value="18">Megapascal (MPa)</option>
+       <option value="19">Kilopascal (kPa)</option>
+       <option value="20">Hectopascal (hPa)</option>
+       <option value="21">Torr (Torr)</option>
+             </p> 
+            </select>
+                </td>
+            <td><span class="mv">to</span>
+            <td>
+       <p><select class="element2" name="two">
+       <option value="#">Pressure</option>
+       <option value="17">Atmosphere (atm)</option>
+       <option value="3">Pascal (Pa)</option>
+       <option value="5">Megapascal (MPa)</option>
+       <option value="6">Kilopascal (kPa)</option>
+       <option value="9">Hectopascal (hPa)</option>
+       <option value="10">Torr (Torr)</option>
+            </td>
+            </tr>
+        </table>
+        
+        <p><input type="number" name="three" class="element3"></p>
+        
+        <div class="ans"><strong class="answer">= <span id="four"></span> <span id="five"></span></strong></div>
+        </form>
+       </fieldset>
+</head>
+<body>
+    
+    
+<script>
+function solve(){
+let a = document.form.one.value;
+let b = document.form.two.value;
+let c = document.form.three.value;
+
+if(a=="2" && b=="3"){
+    let e = c * 101325;
+    let g = document.getElementById("four").innerText=e;
+    let p = document.getElementById("five").innerText="Pa";
+}else if(a=="2" && b=="5"){
+   let h = c / 9.869232667160128;
+   let i = document.getElementById("four").innerText=h;
+   let q = document.getElementById("five").innerText="MPa";
+}else if(a=="2" && b=="6"){
+   let m = c / 0.009869232667160128;
+   let n = document.getElementById("four").innerText=m;
+   let o = document.getElementById("five").innerText="kPa";
+}else if(a=="2" && b=="9"){
+   let t = c / 0.0009869232667160128;
+   let u = document.getElementById("four").innerText=t;
+   let v = document.getElementById("five").innerText="hPa";
+}else if(a=="2" && b=="10"){
+   let za = c * 760;
+   let zb = document.getElementById("four").innerText=za;
+   let zc = document.getElementById("five").innerText="Torr";
+}else if(a=="16" && b=="17"){
+   let ab = c / 101325.02738308864;
+   let ac = document.getElementById("four").innerText=ab;
+   let ad = document.getElementById("five").innerText="atm";
+}else if(a=="16" && b=="5"){
+   let ae = c / 1000000;
+   let af = document.getElementById("four").innerText=ae;
+   let ag = document.getElementById("five").innerText="MPa";
+}else if(a=="16" && b=="6"){
+   let ah = c / 1000;
+   let ai = document.getElementById("four").innerText=ah;
+   let aj = document.getElementById("five").innerText="kPa";
+}else if(a=="16" && b=="9"){
+   let ak = c / 100;
+   let al = document.getElementById("four").innerText=ak;
+   let am = document.getElementById("five").innerText="hPa";
+}else if(a=="16" && b=="10"){
+   let an = c / 133.32236836846923;
+   let ao = document.getElementById("four").innerText=an;
+   let ap = document.getElementById("five").innerText="Torr";
+}else if(a=="18" && b=="17"){
+   let bf = c / 0.101325;
+   let bg = document.getElementById("four").innerText=bf;
+   let bh = document.getElementById("five").innerText="atm";
+}else if(a=="18" && b=="3"){
+   let bi = c * 1000000;
+   let bj = document.getElementById("four").innerText=bi;
+   let bk = document.getElementById("five").innerText="Pa";
+}else if(a=="18" && b=="6"){
+   let bl = c * 1000;
+   let bm = document.getElementById("four").innerText=bl;
+   let bn = document.getElementById("five").innerText="kPa";
+}else if(a=="18" && b=="9"){
+   let bo = c * 10000;
+   let bp = document.getElementById("four").innerText=bo;
+   let bq = document.getElementById("five").innerText="hPa";
+}else if(a=="18" && b=="10"){
+   let br = c / 0.00013332236842105257;
+   let bs = document.getElementById("four").innerText=br;
+   let bt = document.getElementById("five").innerText="Torr";
+}else if(a=="19" && b=="17"){
+   let cj = c / 101.32499997084;
+   let ck = document.getElementById("four").innerText=cj;
+   let cl = document.getElementById("five").innerText="atm";
+}else if(a=="19" && b=="3"){
+   let cm = c * 1000;
+   let cn = document.getElementById("four").innerText=cm;
+   let co = document.getElementById("five").innerText="Pa";
+}else if(a=="19" && b=="5"){
+   let cp = c / 1000;
+   let cq = document.getElementById("four").innerText=cp;
+   let cr = document.getElementById("five").innerText="MPa";
+}else if(a=="19" && b=="9"){
+   let cs = c * 10;
+   let ct = document.getElementById("four").innerText=cs;
+   let cu = document.getElementById("five").innerText="hPa";
+}else if(a=="19" && b=="10"){
+   let cv = c / 0.1333223684210828;
+   let cw = document.getElementById("four").innerText=cv;
+   let cx = document.getElementById("five").innerText="Torr";
+}else if(a=="20" && b=="17"){
+   let dn = c / 1013.2499966284106;
+   let dq = document.getElementById("four").innerText=dn;
+   let dp = document.getElementById("five").innerText="atm";
+}else if(a=="20" && b=="3"){
+   let dr = c * 100;
+   let ds = document.getElementById("four").innerText=dr;
+   let dt = document.getElementById("five").innerText="Pa";
+}else if(a=="20" && b=="5"){
+   let du = c / 10000;
+   let dv = document.getElementById("four").innerText=du;
+   let dw = document.getElementById("five").innerText="MPa";
+}else if(a=="20" && b=="6"){
+   let dx = c / 10;
+   let dy = document.getElementById("four").innerText=dx;
+   let dz = document.getElementById("five").innerText="kPa";
+}else if(a=="20" && b=="10"){
+   let ea = c / 1.3332236842179381;
+   let eb = document.getElementById("four").innerText=ea;
+   let ec = document.getElementById("five").innerText="Torr";
+}else if(a=="21" && b=="17"){
+   let es = c / 760.000002128;
+   let et = document.getElementById("four").innerText=es;
+   let eu = document.getElementById("five").innerText="atm";
+}else if(a=="21" && b=="3"){
+   let ev = c / 0.007500616827041846;
+   let ew = document.getElementById("four").innerText=ev;
+   let ex = document.getElementById("five").innerText="Pa";
+}else if(a=="21" && b=="5"){
+   let ey = c / 7500.6167382113;
+   let ez = document.getElementById("four").innerText=ey;
+   let fa = document.getElementById("five").innerText="MPa";
+}else if(a=="21" && b=="6"){
+   let fb = c / 7.5006168271009175;
+   let fc = document.getElementById("four").innerText=fb;
+   let fd = document.getElementById("five").innerText="kPa";
+}else if(a=="21" && b=="9"){
+   let fe = c / 0.7500616827044658;
+   let ff = document.getElementById("four").innerText=fe;
+   let fg = document.getElementById("five").innerText="hPa";
+  }
+}
+</script>
+</body>
+</html>

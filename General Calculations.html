@@ -1,0 +1,723 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.box{
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 15px;
+  outline: none;
+  height: 200px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  font-size: 55px;
+}
+.btn1{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: green;
+  border: solid black 0.5px;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn1{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn2{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn2{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn3{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.calculator{
+    padding-bottom: 40px;
+}
+.help{
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+}
+@media(max-width: 320px){
+.box{
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 15px;
+  outline: none;
+  height: 200px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  font-size: 55px;
+}
+.btn1{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: green;
+  border: solid black 0.5px;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn1{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn2{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn2{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn3{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.calculator{
+    padding-bottom: 40px;
+}
+.help{
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+ }
+}
+@media(max-width: 375px){
+.box{
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 15px;
+  outline: none;
+  height: 200px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  font-size: 55px;
+}
+.btn1{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: green;
+  border: solid black 0.5px;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn1{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn2{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn2{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn3{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.calculator{
+    padding-bottom: 40px;
+}
+.help{
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+ }
+}
+@media(max-width: 435px){
+.box{
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 15px;
+  outline: none;
+  height: 200px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  font-size: 55px;
+}
+.btn1{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: green;
+  border: solid black 0.5px;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn1{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn2{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn2{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn3{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.calculator{
+    padding-bottom: 40px;
+}
+.help{
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+ }
+}
+@media(max-width: 1024px){
+.box{
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 15px;
+  outline: none;
+  height: 200px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  font-size: 55px;
+}
+.btn1{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: green;
+  border: solid black 0.5px;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn1{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn2{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn2{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn3{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.calculator{
+    padding-bottom: 40px;
+}
+.help{
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+ }
+}
+@media(max-width: 1440px){
+.box{
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 15px;
+  outline: none;
+  height: 200px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  font-size: 55px;
+}
+.btn1{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: green;
+  border: solid black 0.5px;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn1{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn2{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn2{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn3{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.calculator{
+    padding-bottom: 40px;
+}
+.help{
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+ }
+}
+@media(max-width: 2560px){
+.box{
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 15px;
+  outline: none;
+  height: 200px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  font-size: 55px;
+}
+.btn1{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: green;
+  border: solid black 0.5px;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn1{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn2{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+:active.btn2{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.btn3{
+  margin-top: 20px;
+  height: 80px;
+  width: 230px;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.calculator{
+    padding-bottom: 40px;
+}
+.help{
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+ }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>General Calculations</title>
+    <meta name="author" content="Supherhero">
+    <meta name="keywords" content="programming hero,learn programming">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+
+    <!--custom css-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<form name="calform" method="post" onkeyup="return solve()">
+<div class="app">
+    <p><a href="#" class="help" onclick="message()">HELP</a></p>
+   <table class="calculator">
+  <tr>
+    <td colspan="25"> <input class="box" type="text" id="result" disabled/></td>
+  </tr>
+  </div>
+  
+    <center>
+  <tr>
+    <!-- display() function displays the value of clicked button -->
+    <td> <input type="button" class="btn1" id="sin" value="Sin" onclick="sine()" /> </td>
+    <td> <input type="button" class="btn1" value="Cos" onclick="cosine()" /> </td>
+    
+   
+    <td> <input type="button" class="btn1" value="Tan" id="tan" onclick="tangent()" /> </td>
+    
+    
+    <td> <input type="button" class="btn1" id="root" value="√" onclick="squareroot()"/></td>
+  </tr>
+  
+  <tr>
+    <!-- display() function displays the value of clicked button -->
+    <td> <input type="button" class="btn1" value="log" onclick="logarithm()"/></td>
+    <td> <input type="button" class="btn1" value="^" onclick="display('**')"/></td>
+    <td> <input type="button" class="btn1" value="&#179;√" onclick="cuberoot()"/></td>
+    <td> <input type="button" class="btn1" value="x&#178;" onclick="return square()"/></td>
+  </tr>
+  
+  <tr>
+    <!-- display() function displays the value of clicked button -->
+    <td> <input type="button" class="btn1" value="Sin^-1" onclick="arcsine()"/></td>
+    <td> <input type="button" class="btn1" value="Cos^-1" onclick="arccosine()"/></td>
+    <td> <input type="button" class="btn1" value="Tan^-1" onclick="arctangent()"/></td>
+    <td> <input type="button" class="btn1" value="10^x" onclick="return antilog()"/></td>
+  </tr>
+  
+  <tr>
+   <!-- display() function displays the value of clicked button -->
+    <td> <input type="button" class="btn1" value="π" onclick="display('3.14159265359')"/></td>
+    <td> <input type="button" class="btn1" value="e" onclick="display('2.7182818284')"/></td>
+    <td> <input type="button" class="btn1" value="x^-1" onclick="return minusone()"/></td>
+    <td> <input type="button" class="btn1" value="ln" onclick="leen()"/></td>
+  </tr>
+  
+   <tr>
+   <!-- display() function displays the value of clicked button -->
+    <td> <input type="button" class="btn2" id="seven" value="7" onclick="display('7')"/></td>
+    <td> <input type="button" class="btn2" id="eight" value="8" onclick="display('8')"/></td>
+    <td> <input type="button" class="btn2" id="nine" value="9" onclick="display('9')"/></td>
+    <td> <input type="button" class="btn1" value="AC" onclick="clearScreen()"/></td>
+  </tr>
+  
+   <tr>
+   <!-- display() function displays the value of clicked button -->
+    <td> <input type="button" class="btn2" id="four" value="4" onclick="display('4')"/></td>
+    <td> <input type="button" class="btn2" id="five" value="5" onclick="display('5')"/></td>
+    <td> <input type="button" class="btn2" id="six" value="6" onclick="display('6')"/></td>
+    <td> <input type="button" class="btn2" value="+" onclick="display('+')"/></td>
+  </tr>
+  
+  <tr>
+   <!-- display() function displays the value of clicked button -->
+    <td> <input type="button" class="btn2" id="one" value="1" onclick="display('1')"/></td>
+    <td> <input type="button" class="btn2" id="two" value="2" onclick="display('2')"/></td>
+    <td> <input type="button" class="btn2" id="three" value="3" onclick="display('3')"/></td>
+    <td> <input type="button" class="btn2" value="-" onclick="display('-')"/></td>
+  </tr>
+  
+  <tr>
+   <!-- display() function displays the value of clicked button -->
+    <td> <input type="button" class="btn2" id="zero" value="0" onclick="display('0')"/></td>
+    <td> <input type="button" class="btn2" value="." onclick="display('.')"/></td>
+    <td> <input type="button" class="btn2" value="÷" onclick="display('/')"/></td>
+    <td> <input type="button" class="btn2" value="×" onclick="display('*')"/></td>
+  </tr>
+  
+  <tr>
+   <!-- display() function displays the value of clicked button -->
+    <td> <input type="button" class="btn3" value="EXP" onclick="display('*10**')"/></td>
+    <td> <input type="button" class="btn3" value="Mod" onclick="display('%')"/></td>
+    <td> <input type="button" class="btn2" value="DEL" onclick="backspace()"/></td>
+    <td> <input type="button" class="btn2" value="=" onclick="calculate()" id="btn"/></td>
+  </tr>
+  </center>
+   
+   
+  
+   
+
+</div>
+
+
+
+
+
+<!--main js-->
+<script>
+ // This function clears all the values
+function clearScreen(){
+    document.getElementById("result").value = "";
+}
+
+function backspace() {
+    let display = document.getElementById("result");
+    display.value = display.value.slice(0, -1);
+}
+ 
+// This function displays the values
+function display(value) {
+    document.getElementById("result").value += value;
+}
+ 
+// This function evaluates the expression and returns the result
+function calculate() {
+    var p = document.getElementById("result").value;
+    var q = eval(p);
+    document.getElementById("result").value = q;
+}
+
+function sine(){
+    let a = document.getElementById("result").value;
+    let b = a * 0.01745329252;
+    let c = Math.sin(b);
+    let d = c * 1;
+    document.getElementById("result").value = d;
+    
+if(a=="180"){
+    document.getElementById("result").value = "0";
+}else if(a=="360"){
+    document.getElementById("result").value = "0";
+ }
+}
+
+function squareroot(){   
+    let a = document.getElementById("result").value;
+    let b = Math.sqrt(a);
+    document.getElementById("result").value = b;
+}
+
+function logarithm(){   
+    let a = document.getElementById("result").value;
+    let b = Math.log10(a);
+    document.getElementById("result").value = b;
+}
+
+function cosine(){   
+    let a = document.getElementById("result").value;
+    let b = a * 0.01745329252;
+    let c = Math.cos(b);
+    let d = c * 1;
+    document.getElementById("result").value = d;
+    
+if(a=="90"){
+    document.getElementById("result").value = "0";
+ }
+}
+
+function tangent(){   
+    let a = document.getElementById("result").value;
+    let b = a * 0.01745329252;
+    let c = Math.tan(b);
+    let d = c * 1;
+    document.getElementById("result").value = d;
+    
+if(a=="90"){
+    document.getElementById("result").value = "Infinity";
+}else if(a=="180"){
+    document.getElementById("result").value = "0";
+}else if(a=="360"){
+    document.getElementById("result").value = "0";
+ }
+}
+
+function square(){
+    let a = document.getElementById("result").value;
+    let b = Math.pow(a,2);
+    document.getElementById("result").value = b;
+}
+
+function minusone(){
+    let c = document.getElementById("result").value;
+    let d = Math.pow(c,-1);
+    document.getElementById("result").value = d;
+}
+
+function antilog(){
+    let c = document.getElementById("result").value;
+    let d = Math.pow(10,c);
+    document.getElementById("result").value = d;
+}
+
+function arccosine(){
+    let a = document.getElementById("result").value;
+    let b = Math.acos(a);
+    let c = b * 57.29577951308;
+    document.getElementById("result").value = c;
+}
+
+function arcsine(){
+    let a = document.getElementById("result").value;
+    let b = Math.asin(a);
+    let c = b * 57.29577951308;
+    document.getElementById("result").value = c;
+}
+
+function arctangent(){
+    let a = document.getElementById("result").value;
+    let b = Math.atan(a);
+    let c = b * 57.29577951308;
+    document.getElementById("result").value = c;
+}
+
+function leen(){
+    let a = document.getElementById("result").value;
+    let b = Math.log(a);
+    document.getElementById("result").value = b;
+}
+
+function message(){
+    alert("To find the sine, cosine, tangent, square root, log, cuberoot, arc sine, arc cosine, arc tangent, antilog, inverse, Ln of a number first enter the number then click on the button.");
+    return false;
+}
+
+function cuberoot(){
+    let a = document.getElementById("result").value;
+    let b = Math.cbrt(a);
+    document.getElementById("result").value = b;
+}
+</script>
+</body>
+</html>

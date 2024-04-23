@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 50px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 25px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 25px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 50px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 25px;
+   background: white;
+   margin-left: 40px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 60px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 25px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 65px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#four{
+    margin-left: 10px;
+}
+@media(max-width: 320px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+   margin-left: 30px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 60px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 420px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+@media(max-width: 375px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 25px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 25px;
+   background: white;
+   margin-left: 30px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 60px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 420px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+@media(max-width: 435px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 70px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+   margin-left: 30px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 60px;
+        outline: none;
+        border-radius: 15px;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 420px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+@media(max-width: 1024px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+   margin-left: 40px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 430px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 120px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+@media(max-width: 1440px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+   margin-left: 40px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 450px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 120px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+@media(max-width: 2560px){
+body{
+    background: #3498DB;
+}
+.box{
+        height: 700px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+}
+.element:hover{
+   border: 4px solid #18bfef;
+}
+span{
+    font-size: 35px;
+}
+.mv{
+    margin-left: 40px;
+}
+.element2{
+   height: 80px;
+   width: 230px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 35px;
+   background: white;
+   margin-left: 40px;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.element3{
+        height: 70px;
+        outline: none;
+        border-radius: 15px;
+        width: 200px;
+        border: 3px solid black;
+        font-size: 35px;
+}
+.element3:hover{
+   border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 450px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 140px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#four{
+    margin-left: 10px;
+ }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Conversion Of Power Unit</title>
+    <fieldset class="box">
+     <form name="form" oninput="return solve()">
+        <table>
+            <tr>
+            <td colspan="5">
+       <p><select class="element" name="one">
+       <option value="#">Power</option>  
+       <option value="2">Megawatt (MW)</option>
+       <option value="4">Kilowatt (KW)</option>
+       <option value="7">Watt (W)</option>
+             </p> 
+            </select>
+                </td>
+            <td><span class="mv">to</span>
+            <td>
+       <p><select class="element2" name="two">
+       <option value="#">Power</option>  
+       <option value="3">Megawatt (MW)</option>
+       <option value="5">Kilowatt (KW)</option>
+       <option value="6">Watt (W)</option>
+            </td>
+            </tr>
+        </table>
+        
+        <p><input type="number" name="three" class="element3"></p>
+        
+        <div class="ans"><strong class="answer">= <span id="four"></span> <span id="five"></span></strong></div>
+        </form>
+       </fieldset>
+</head>
+<body>
+    
+    
+<script>
+function solve(){
+let a = document.form.one.value;
+let b = document.form.two.value;
+let c = document.form.three.value; 
+let d = 273;
+
+if(a=="2" && b=="5"){
+    let e = c * 1000;
+    let g = document.getElementById("four").innerText=e;
+    let p = document.getElementById("five").innerText="KW";
+}else if(a=="4" && b=="3"){
+   let h = c / 1000;
+   let i = document.getElementById("four").innerText=h;
+   let q = document.getElementById("five").innerText="MW";
+}else if(a=="2" && b=="6"){
+   let m = c * 1000000;
+   let n = document.getElementById("four").innerText=m;
+   let o = document.getElementById("five").innerText="W";
+}else if(a=="7" && b=="5"){
+   let t = c / 1000;
+   let u = document.getElementById("four").innerText=t;
+   let v = document.getElementById("five").innerText="KW";
+}else if(a=="7" && b=="3"){
+   let za = c / 1000000;
+   let zb = document.getElementById("four").innerText=za;
+   let zc = document.getElementById("five").innerText="MW";
+}else if(a=="4" && b=="6"){
+   let zh = c * 1000;
+   let zi = document.getElementById("four").innerText=zh;
+   let zj = document.getElementById("five").innerText="W";
+  }
+}
+</script>
+</body>
+</html>

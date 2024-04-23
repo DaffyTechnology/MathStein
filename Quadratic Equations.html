@@ -1,0 +1,840 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body{
+  background: #3498DB;
+}
+.sec .main{
+    background: white;
+    height: 1800px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 5px rgba(0,0,0,0.2);
+    transition: height 0.2s ease;
+}
+.sec .first{
+    height: 50px;
+    width: 100px;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: 3px solid black;
+    outline: none;
+    font-size: 20px;
+    padding: 0px 1px;
+}
+.sec .first:hover{
+    border: 5px solid #18bfef;
+}
+.ent{
+    display: flex;
+    margin-left: 10px;
+}
+.ent .co{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.ans{
+    background: #fff;
+    width: 430px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#ansss, #anss{
+    margin-left: 10px;
+}
+/* new css code */
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+#solvebox{
+    margin-top: 30px;
+    display: none;
+}
+span{
+    font-size: 30px;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#twoa{
+    margin-left: 100px;
+}
+#space{
+    margin-top: 40px;
+}
+#twoa1{
+    margin-left: 90px;
+}
+#mv{
+    margin-left: 60px;
+}
+#mv2{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#c9, #c10{
+    margin-left: 40px;
+}
+@media(max-width: 320px){
+body{
+  background: #3498DB;
+}
+.sec .main{
+    background: white;
+    height: 1800px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 5px rgba(0,0,0,0.2);
+    transition: height 0.2s ease;
+}
+.sec .first{
+    height: 50px;
+    width: 100px;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: 3px solid black;
+    outline: none;
+    font-size: 20px;
+    padding: 0px 1px;
+}
+.sec .first:hover{
+    border: 5px solid #18bfef;
+}
+.ent{
+    display: flex;
+    margin-left: 10px;
+}
+.ent .co{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 60px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#ansss, #anss{
+    margin-left: 10px;
+}
+/* new css code */
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+#solvebox{
+    margin-top: 30px;
+    display: none;
+}
+span{
+    font-size: 25px;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#twoa{
+    margin-left: 100px;
+}
+#space{
+    margin-top: 40px;
+}
+#twoa1{
+    margin-left: 90px;
+}
+#mv{
+    margin-left: 60px;
+}
+#mv2{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#c9, #c10{
+    margin-left: 40px;
+ }
+}
+@media(max-width: 375px){
+body{
+  background: #3498DB;
+}
+.sec .main{
+    background: white;
+    height: 1800px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 5px rgba(0,0,0,0.2);
+    transition: height 0.2s ease;
+}
+.sec .first{
+    height: 50px;
+    width: 100px;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: 3px solid black;
+    outline: none;
+    font-size: 20px;
+    padding: 0px 1px;
+}
+.sec .first:hover{
+    border: 5px solid #18bfef;
+}
+.ent{
+    display: flex;
+    margin-left: 10px;
+}
+.ent .co{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 60px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#ansss, #anss{
+    margin-left: 10px;
+}
+/* new css code */
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+#solvebox{
+    margin-top: 30px;
+    display: none;
+}
+span{
+    font-size: 25px;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#twoa{
+    margin-left: 100px;
+}
+#space{
+    margin-top: 40px;
+}
+#twoa1{
+    margin-left: 90px;
+}
+#mv{
+    margin-left: 60px;
+}
+#mv2{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#c9, #c10{
+    margin-left: 40px;
+ }
+}
+@media(max-width: 435px){
+body{
+  background: #3498DB;
+}
+.sec .main{
+    background: white;
+    height: 1800px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 5px rgba(0,0,0,0.2);
+    transition: height 0.2s ease;
+}
+.sec .first{
+    height: 50px;
+    width: 100px;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: 3px solid black;
+    outline: none;
+    font-size: 20px;
+    padding: 0px 1px;
+}
+.sec .first:hover{
+    border: 5px solid #18bfef;
+}
+.ent{
+    display: flex;
+    margin-left: 10px;
+}
+.ent .co{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 60px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#ansss, #anss{
+    margin-left: 10px;
+}
+/* new css code */
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+#solvebox{
+    margin-top: 30px;
+    display: none;
+}
+span{
+    font-size: 25px;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#twoa{
+    margin-left: 100px;
+}
+#space{
+    margin-top: 40px;
+}
+#twoa1{
+    margin-left: 90px;
+}
+#mv{
+    margin-left: 60px;
+}
+#mv2{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#c9, #c10{
+    margin-left: 40px;
+ }
+}
+@media(max-width: 1024px){
+body{
+  background: #3498DB;
+}
+.sec .main{
+    background: white;
+    height: 1800px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 5px rgba(0,0,0,0.2);
+    transition: height 0.2s ease;
+}
+.sec .first{
+    height: 60px;
+    width: 150px;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: 3px solid black;
+    outline: none;
+    font-size: 20px;
+    padding: 0px 1px;
+}
+.sec .first:hover{
+    border: 5px solid #18bfef;
+}
+.ent{
+    display: flex;
+    margin-left: 10px;
+}
+.ent .co{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 70px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 4px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#ansss, #anss{
+    margin-left: 10px;
+}
+/* new css code */
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+#solvebox{
+    margin-top: 30px;
+    display: none;
+}
+span{
+    font-size: 30px;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#twoa{
+    margin-left: 100px;
+}
+#space{
+    margin-top: 40px;
+}
+#twoa1{
+    margin-left: 90px;
+}
+#mv{
+    margin-left: 60px;
+}
+#mv2{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#c9, #c10{
+    margin-left: 40px;
+ }
+}
+@media(max-width: 1440px){
+body{
+  background: #3498DB;
+}
+.sec .main{
+    background: white;
+    height: 1800px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 5px rgba(0,0,0,0.2);
+    transition: height 0.2s ease;
+}
+.sec .first{
+    height: 50px;
+    width: 150px;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: 3px solid black;
+    outline: none;
+    font-size: 20px;
+    padding: 0px 1px;
+}
+.sec .first:hover{
+    border: 5px solid #18bfef;
+}
+.ent{
+    display: flex;
+    margin-left: 10px;
+}
+.ent .co{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 75px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 4px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#ansss, #anss{
+    margin-left: 10px;
+}
+/* new css code */
+.btn{
+  height: 60px;
+  background: black;
+  width: 220px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+#solvebox{
+    margin-top: 30px;
+    display: none;
+}
+span{
+    font-size: 30px;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#twoa{
+    margin-left: 100px;
+}
+#space{
+    margin-top: 40px;
+}
+#twoa1{
+    margin-left: 90px;
+}
+#mv{
+    margin-left: 60px;
+}
+#mv2{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#c9, #c10{
+    margin-left: 40px;
+ }
+}
+@media(max-width: 2560px){
+body{
+  background: #3498DB;
+}
+.sec .main{
+    background: white;
+    height: 1800px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 5px rgba(0,0,0,0.2);
+    transition: height 0.2s ease;
+}
+.sec .first{
+    height: 70px;
+    width: 150px;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: 4px solid black;
+    outline: none;
+    font-size: 34px;
+    padding: 0px 1px;
+}
+.sec .first:hover{
+    border: 5px solid #18bfef;
+}
+.ent{
+    display: flex;
+    margin-left: 10px;
+}
+.ent .co{
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+.ans{
+    background: #fff;
+    width: 500px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 85px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 4px solid black;
+}
+.answer{
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 35px;
+}
+#ansss, #anss{
+    margin-left: 10px;
+}
+/* new css code */
+.btn{
+  height: 80px;
+  background: black;
+  width: 310px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 33px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+#solvebox{
+    margin-top: 30px;
+    display: none;
+}
+span{
+    font-size: 35px;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#twoa{
+    margin-left: 100px;
+}
+#space{
+    margin-top: 43px;
+}
+#twoa1{
+    margin-left: 90px;
+}
+#mv{
+    margin-left: 63px;
+}
+#mv2{
+    margin-left: 17px;
+    margin-right: 17px;
+}
+#c9, #c10{
+    margin-left: 43px;
+ }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Quadratic Equations</title>
+    <meta name="author" content="Supherhero">
+    <meta name="keywords" content="programming hero,learn programming">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+
+    <!--custom css-->
+    <link rel="stylesheet" href="css/style.css" media="all">
+</head>
+<body>           
+            <div class="sec">
+          <fieldset class="main">
+    <form name="solveform" oninput="return solvequad()">
+           <div class="ent">
+          <p><br><strong class="co">ax<sup>2</sup></strong></br><input type="number" name="a" id="a" autocomplete="off" class="first" maxlength="3"></p> 
+          
+          <p><br><strong class="co">bx</strong></br><input type="number" name="b" id="b" autocomplete="off" class="first"></p>
+          
+          <p><br><strong class="co">c</strong></br><input type="number" name="c" id="c" autocomplete="off" class="first"></p>
+                 </div>
+        </form>
+                  
+           <div class="ans"><strong class="answer">X =<span id="ansss"></span></strong></div>
+
+           <div class="ans"><strong class="answer">X =<span id="anss"></span></strong></div>
+          
+     <p><button class="btn" onclick="return solvings()">Show Solvings</button></p>
+          
+       <div class="solvebox" id="solvebox">
+        <p><span>Using Almighty Formular</span></p>
+        
+   <p><span>x = </span> <u> <span>- b &#177; √b<span><span>&#178;</span></span> <span> - 4ac</span></span></u> <br><span id="twoa1">2a</span></br></p>
+        
+   <p><span>x = </span> <u> <span id=""> <span>-</span> <span>(</span><span id="b1"></span><span>)</span> <span>&#177;</span> <span>√</span> <span>(</span><span id="b2"></span><span>)</span><span id=""><span>&#178;</span></span> <span> - </span> <span>4</span> <span>×</span> <span id="a1"></span> <span>×</span> <span id="c1"></span> </u></span></span> <br><span id="space"></span> <span id="twoa"></span><span>2</span><span>×</span><span id="a2"></span></br></p> 
+   
+   <p><span>x = </span> <u><span id=""> <span id="b3"></span> <span>&#177;</span> <span>√</span> <span id="b4"></span> <span>-</span> <span id="c2"></span></span></u> <br><span id="twoa"></span><span id="a3"></span></br></p>
+   
+   <span>x =</span> <u><span id=""> <span id="a5"></span> <span>&#177;</span> <span>√</span><span id="b5"></span></span></u> <br><span id="mv"></span><span id="2a"></span></br> </span>
+   
+   <span>x =</span> <u><span id=""> <span id="a6"></span> <span>&#177;</span> <span id="b6"></span></span></u> <br><span id="mv"></span><span id="c6"></span></br>
+   
+   <table class="sep">
+       <tr>
+         <td colspan="5"><span>x =</span> <u><span id=""> <span id="a7"></span> <span>+</span> <span id="b7"></span></span></u> <br><span id="mv"></span><span id="c7"></span></br></td>
+         <td><span id="mv2">or</span></td>
+         <td colspan="5"><span>x =</span> <u><span id=""> <span id="a8"></span> <span>-</span> <span id="b8"></span></span></u> <br><span id="mv"></span><span id="c8"></span></br></td>
+       </tr>
+       
+       <tr>
+           <td colspan="5"><span>x =</span> <u><span id=""> <span id="a9"></span></span></u> <br><span id="c9"></span></br></td>
+           <td><span id="mv2">or</span></td>
+           <td><span>x =</span> <u><span id=""> <span id="a10"></span></span></u> <br><span id="c10"></span></br></td>
+       </tr>
+       
+       <tr>
+           <td colspan="5"><span>x =</span> <span id="ans1"></span></td>
+           <td><span id="mv3">or</span></td>
+           <td><span>x =</span> <span id="ans2"></span></td>
+       </tr>
+   </table>
+        
+       </div>
+          
+          
+          
+          </fieldset>
+                 </div>
+                  </div>
+                  </div>
+                  </div>
+                 
+    
+
+</div>
+
+
+
+<!--main js-->
+<script>
+function solvequad(){   
+let a = document.solveform.a.value;
+let b = document.solveform.b.value;
+let c = document.solveform.c.value;
+let d = -1 * b;
+let e = Math.pow(b,2);
+let f = 4 * a * c;
+let g = 2 * a;
+let h = e - f;
+let i = Math.sqrt(h);
+let j = d + i;
+let k = j / g;
+let l = document.getElementById("ansss").innerText=k;
+let m = d - i;
+let n = m / g;
+let o = document.getElementById("anss").innerText=n;
+let p = document.getElementById("b1").innerText=b;
+let q = document.getElementById("b2").innerText=b;
+let r = document.getElementById("a1").innerText=a;
+let s = document.getElementById("c1").innerText=c;
+let t = document.getElementById("a2").innerText=a;
+let u = document.getElementById("b3").innerText=d;
+let v = document.getElementById("b4").innerText=e;
+let w = document.getElementById("c2").innerText=f;
+let x = document.getElementById("a3").innerText=g;
+let y = document.getElementById("a5").innerText=d;
+let z = document.getElementById("b5").innerText=h;
+let za = document.getElementById("2a").innerText=g;
+let zb = document.getElementById("a6").innerText=d;
+let zc = document.getElementById("b6").innerText=i;
+let zd = document.getElementById("c6").innerText=g;
+let ze = document.getElementById("a7").innerText=d;
+let zf = document.getElementById("b7").innerText=i;
+let zg = document.getElementById("c7").innerText=g;
+let zh = document.getElementById("a8").innerText=d;
+let zi = document.getElementById("b8").innerText=i;
+let zj = document.getElementById("c8").innerText=g;
+let zk = document.getElementById("a9").innerText=j;
+let zl = document.getElementById("c9").innerText=g;
+let zm = document.getElementById("a10").innerText=m;
+let zn = document.getElementById("c10").innerText=g;
+let zo = document.getElementById("ans1").innerText=k;
+let zp = document.getElementById("ans2").innerText=n;
+ 
+if(a==null || a==""){
+    document.getElementById("solvebox").style.display="none";
+}else if(b==null || b==""){
+    document.getElementById("solvebox").style.display="none";
+}else if(c==null || c==""){
+    document.getElementById("solvebox").style.display="none";
+  }
+}
+
+function solvings(){
+let a = document.solveform.a.value;
+let b = document.solveform.b.value;
+let c = document.solveform.c.value;
+
+    document.getElementById("solvebox").style.display="block";
+    
+if(a==null || a==""){
+    document.getElementById("solvebox").style.display="none";
+}else if(b==null || b==""){
+    document.getElementById("solvebox").style.display="none";
+}else if(c==null || c==""){
+    document.getElementById("solvebox").style.display="none";
+  }
+}
+</script>
+</body>
+</html>

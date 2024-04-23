@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1300px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 2px;
+    border-radius: 1em;
+    width: 400px;
+
+}
+.top{
+    margin-left: 10px;
+    width: 400px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 5px;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+#det3{
+    margin-left: 10px;
+}
+.word{
+    font-size: 30px;
+}
+.bracket{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.spc{
+    margin-top: 40px;
+}
+.transbox{
+    border: 3px solid black;
+    height: 170px;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+span{
+    font-size: 35px;
+}
+@media(max-width: 320px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1300px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 100px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 2px;
+    border-radius: 1em;
+    width: 400px;
+
+}
+.top{
+    margin-left: 10px;
+    width: 400px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 5px;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+#det3{
+    margin-left: 10px;
+}
+.word{
+    font-size: 30px;
+}
+.bracket{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.spc{
+    margin-top: 40px;
+}
+.transbox{
+    border: 3px solid black;
+    height: 170px;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+span{
+    font-size: 30px;
+ }
+}
+@media(max-width: 375px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1300px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 100px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 2px;
+    border-radius: 1em;
+    width: 400px;
+
+}
+.top{
+    margin-left: 10px;
+    width: 400px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 5px;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+#det3{
+    margin-left: 10px;
+}
+.word{
+    font-size: 30px;
+}
+.bracket{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.spc{
+    margin-top: 40px;
+}
+.transbox{
+    border: 3px solid black;
+    height: 170px;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+span{
+    font-size: 30px;
+ }
+}
+@media(max-width: 435px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1300px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 100px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 2px;
+    border-radius: 1em;
+    width: 400px;
+
+}
+.top{
+    margin-left: 10px;
+    width: 400px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 5px;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+#det3{
+    margin-left: 10px;
+}
+.word{
+    font-size: 30px;
+}
+.bracket{
+    border: 3px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.spc{
+    margin-top: 40px;
+}
+.transbox{
+    border: 3px solid black;
+    height: 170px;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+span{
+    font-size: 30px;
+ }
+}
+@media(max-width: 1024px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1300px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 70px;
+    outline: none;
+    border-radius: 15px;
+    width: 160px;
+    border: 4px solid black;
+    font-size: 30px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 2px;
+    border-radius: 1em;
+    width: 400px;
+
+}
+.top{
+    margin-left: 10px;
+    width: 400px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 5px;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.ans{
+    background: #fff;
+    width: 450px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 80px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+#det3{
+    margin-left: 10px;
+}
+.word{
+    font-size: 35px;
+}
+.bracket{
+    border: 4px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 410px;
+}
+.spc{
+    margin-top: 40px;
+}
+.transbox{
+    border: 4px solid black;
+    height: 170px;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+span{
+    font-size: 35px;
+ }
+}
+@media(max-width: 1440px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1300px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 70px;
+    outline: none;
+    border-radius: 15px;
+    width: 160px;
+    border: 4px solid black;
+    font-size: 30px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 2px;
+    border-radius: 1em;
+    width: 400px;
+
+}
+.top{
+    margin-left: 10px;
+    width: 400px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 5px;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.ans{
+    background: #fff;
+    width: 450px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 70px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+#det3{
+    margin-left: 10px;
+}
+.word{
+    font-size: 35px;
+}
+.bracket{
+    border: 4px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.spc{
+    margin-top: 40px;
+}
+.transbox{
+    border: 4px solid black;
+    height: 170px;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+span{
+    font-size: 35px;
+ }
+}
+@media(max-width: 2560px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1300px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 75px;
+    outline: none;
+    border-radius: 15px;
+    width: 170px;
+    border: 4px solid black;
+    font-size: 35px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 2px;
+    border-radius: 1em;
+    width: 400px;
+
+}
+.top{
+    margin-left: 10px;
+    width: 400px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 5px;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.ans{
+    background: #fff;
+    width: 450px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 70px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+#det3{
+    margin-left: 10px;
+}
+.word{
+    font-size: 40px;
+}
+.bracket{
+    border: 4px solid black;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 410px;
+}
+.spc{
+    margin-top: 40px;
+}
+.transbox{
+    border: 4px solid black;
+    height: 180px;
+    border-radius: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+span{
+    font-size: 35px;
+ }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Transpose Of 3×3 Matrix</title>
+</head>
+<body>
+    <fieldset class="box">
+     <div class="head">
+         <fieldset class="bracket">
+   <form name="sform" method="post" onkeyup="return solve()">
+    <table class="calculator">
+  <tr>
+    <td colspan="10"><br><strong class="word">a<sub>11</sub></strong></br>
+    <input class="element" type="number" name="a"></td>
+    
+    <td><br><strong class="word">a<sub>12</sub></strong></br><input type="number" class="element" name="b"></td>
+    
+    <td><br><strong class="word">a<sub>13</sub></strong></br><input type="number" class="element" name="c"></td>
+  </tr>
+
+      <table class="top">     
+  <tr>
+    <td colspan="10"><br><strong class="word">a<sub>21</sub></strong></br><input class="element" type="number" name="d"></td>
+    
+    <td><br><strong class="word">a<sub>22</sub></strong></br><input type="number" class="element" name="e"></td>
+    
+    <td><br><strong class="word">a<sub>23</sub></strong></br><input type="number" class="element" name="f"></td>
+  </tr>
+  
+        <table class="top">     
+  <tr>
+    <td colspan="10"><br><strong class="word">a<sub>31</sub></strong></br><input class="element" type="number" name="g"></td>
+    
+    <td><br><strong class="word">a<sub>32</sub></strong></br><input type="number" class="element" name="h"></td>
+    
+    <td><br><strong class="word">a<sub>33</sub></strong></br><input type="number" class="element" name="i"></td>
+  </tr>
+  </table>
+  </div>
+  
+     <div class="ans"><strong class="answer">Transpose =<span id="det3"></span></strong></div>
+     
+     <div class="spc">
+     </div>
+    
+   <fieldset class="transbox">
+         <table class="top">     
+  <tr>
+    <td colspan="10"><strong class="answer"><span id="a"></span></strong></td>
+    
+    <td><strong class="answer"><span id="b"></span></strong></td>
+    
+    <td><strong class="answer"><span id="c"></span></strong></td>
+   
+  </tr>
+  </table>
+  
+           <table class="top">     
+  <tr>
+    <td colspan="10"><strong class="answer"><span id="d"></span></strong></td>
+    
+    <td><strong class="answer"><span id="e"></span></strong></td>
+    
+    <td><strong class="answer"><span id="f"></span></strong></td>
+   
+  </tr>
+  </table>
+  
+           <table class="top">     
+  <tr>
+    <td colspan="10"><strong class="answer"><span id="g"></span></strong></td>
+    
+    <td><strong class="answer"><span id="h"></span></strong></td>
+    
+    <td><strong class="answer"><span id="i"></span></strong></td>
+   
+  </tr>
+  </table>
+    </fieldset>
+    
+    
+<script>
+function solve(){
+let a = document.sform.a.value;
+let b = document.sform.b.value;
+let c = document.sform.c.value;
+let d = document.sform.d.value;
+let e = document.sform.e.value;
+let f = document.sform.f.value;
+let g = document.sform.g.value;
+let h = document.sform.h.value;
+let i = document.sform.i.value;
+let j = document.getElementById("a").innerText=a;
+let k = document.getElementById("b").innerText=d;
+let l = document.getElementById("c").innerText=g;
+let m = document.getElementById("d").innerText=b;
+let n = document.getElementById("e").innerText=e;
+let o = document.getElementById("f").innerText=h;
+let p = document.getElementById("g").innerText=c;
+let q = document.getElementById("h").innerText=f;
+let r = document.getElementById("i").innerText=i;
+}
+</script>
+</body>
+</html>
