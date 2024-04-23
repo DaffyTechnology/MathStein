@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+  background: #3498DB;
+}
+.box{
+        height: 2100px;
+        width: 1500px;
+        background: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.element{
+        margin-bottom: 10px;
+        height: 60px;
+        outline: none;
+        border-radius: 15px;
+        width: 80px;
+        border: 3px solid black;
+        font-size: 25px;
+}
+::placeholder{
+        padding: 0px 5px;
+}
+.word{
+    font-size: 30px;
+}
+.element:hover{
+        border: 4px solid #18bfef;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 90px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#si, #anssi{
+    margin-left: 10px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+.calculator{
+        font-size: 25px;
+        letter-spacing: 1px;
+}
+span{
+    font-size: 25px;
+}
+#top{
+    border-top: 2px solid black:
+}
+#box2{
+    height: 200px;
+}
+#top{
+    border-top: 3px solid black;
+}
+.element2{
+   height: 50px;
+   width: 200px;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 5px;
+   font-size: 25px;
+   background: white;
+}
+.element2:hover{
+   border: 4px solid #18bfef;
+}
+.mv{
+    margin-top: 30px;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Statistics Table</title>
+</head>
+<body>
+<fieldset class="box">
+     <div class="head">
+   <form name="siform" method="post" oninput="return solve()">
+     
+    <p><span>Mean (<span id="top">x</span>) = <span id="t13"></span></span></p>
+    
+    <p><br><strong class="word">Enter Your Approximated Mean Value</strong></br>
+    <input class="element2" type="number" name="u1" placeholder="Mean Value"></p>
+    
+    <div class="mv">
+     <table border="1" cellpadding="30px" cellspacing="4px">    
+ <tr>    
+  <td><span>x</span></td>    
+  <td><span>f</span></td>
+  <td><span>fx</span></td>
+  <td><span>x - <span id="top">x</span></span></td>
+  <td><span>(x - <span id="top">x</span><span>)&#178;</span></span></td>
+  <td><span>f(x - <span id="top">x</span><span>)&#178;</span></span></td>
+ </tr>    
+ 
+  <tr>    
+  <td><input type="number" class="element" name="a1" placeholder=""></td> 
+  <td><input type="number" class="element" name="b1" placeholder=""></td>
+  <td><span id="t1"></span></td>
+  <td><span id="t14"></span></td>
+  <td><span id="t24"></span></td>
+  <td><span id="t34"></span></td>
+  </tr> 
+  
+  <tr>    
+  <td><input type="number" class="element" name="c1" placeholder=""></td> 
+  <td><input type="number" class="element" name="d1" placeholder=""></td>
+  <td><span id="t2"></span></td>
+  <td><span id="t15"></span></td>
+  <td><span id="t25"></span></td>
+  <td><span id="t35"></span></td>
+  </tr>  
+  
+  <tr>    
+  <td><input type="number" class="element" name="e1" placeholder=""></td> 
+  <td><input type="number" class="element" name="f1" placeholder=""></td>
+  <td><span id="t3"></span></td>
+  <td><span id="t16"></span></td>
+  <td><span id="t26"></span></td>
+  <td><span id="t36"></span></td>
+  </tr>  
+  
+  <tr>    
+  <td><input type="number" class="element" name="g1" placeholder=""></td> 
+  <td><input type="number" class="element" name="h1" placeholder=""></td>
+  <td><span id="t4"></span></td>
+  <td><span id="t17"></span></td>
+  <td><span id="t27"></span></td>
+  <td><span id="t37"></span></td>
+  </tr>  
+  
+  <tr>    
+  <td><input type="number" class="element" name="i1" placeholder=""></td> 
+  <td><input type="number" class="element" name="j1" placeholder=""></td>
+  <td><span id="t5"></span></td>
+  <td><span id="t18"></span></td>
+  <td><span id="t28"></span></td>
+  <td><span id="t38"></span></td>
+  </tr>  
+  
+  <tr>    
+  <td><input type="number" class="element" name="k1" placeholder=""></td> 
+  <td><input type="number" class="element" name="l1" placeholder=""></td>
+  <td><span id="t6"></span></td>
+  <td><span id="t19"></span></td>
+  <td><span id="t29"></span></td>
+  <td><span id="t39"></span></td>
+  </tr>  
+  
+  <tr>    
+  <td><input type="number" class="element" name="m1" placeholder=""></td> 
+  <td><input type="number" class="element" name="n1" placeholder=""></td>
+  <td><span id="t7"></span></td>
+  <td><span id="t20"></span></td>
+  <td><span id="t30"></span></td>
+  <td><span id="t40"></span></td>
+  </tr>  
+  
+  <tr>    
+  <td><input type="number" class="element" name="o1" placeholder=""></td> 
+  <td><input type="number" class="element" name="p1" placeholder=""></td>
+  <td><span id="t8"></span></td>
+  <td><span id="t21"></span></td>
+  <td><span id="t31"></span></td>
+  <td><span id="t41"></span></td>
+  </tr>  
+  
+  <tr>    
+  <td><input type="number" class="element" name="q1" placeholder=""></td> 
+  <td><input type="number" class="element" name="r1" placeholder=""></td>
+  <td><span id="t9"></span></td>
+  <td><span id="t22"></span></td>
+  <td><span id="t32"></span></td>
+  <td><span id="t42"></span></td>
+  </tr>  
+  
+  <tr>    
+  <td><input type="number" class="element" name="s1" placeholder=""></td> 
+  <td><input type="number" class="element" name="t1" placeholder=""></td>
+  <td><span id="t10"></span></td>
+  <td><span id="t23"></span></td>
+  <td><span id="t33"></span></td>
+  <td><span id="t43"></span></td>
+  </tr>  
+  
+  <tr>    
+  <td></td> 
+  <td><span>&#x2211;f</span> = <span id="t11"></span></td>
+  <td><span>&#x2211;fx</span> = <span id="t12"></span></td>
+  <td></td>
+  <td></td>
+  <td><span id="t44"></span></td>
+  </tr>  
+     </table>  
+    
+      </form>
+      </div>
+    
+    
+    
+    
+<script>
+function solve(){
+let a = document.siform.a1.value;
+let b = document.siform.b1.value;
+let c = document.siform.c1.value;
+let d = document.siform.d1.value;
+let e = document.siform.e1.value;
+let f = document.siform.f1.value;
+let g = document.siform.g1.value;
+let h = document.siform.h1.value;
+let i = document.siform.i1.value;
+let j = document.siform.j1.value;
+let k = document.siform.k1.value;
+let l = document.siform.l1.value;
+let m = document.siform.m1.value;
+let n = document.siform.n1.value;
+let o = document.siform.o1.value;
+let p = document.siform.p1.value;
+let q = document.siform.q1.value;
+let r = document.siform.r1.value;
+let s = document.siform.s1.value;
+let t = document.siform.t1.value;
+let cj = document.siform.u1.value;
+let u = a * b;
+let v = document.getElementById("t1").innerText=u;
+let w = c * d;
+let x = document.getElementById("t2").innerText=w;
+let y = e * f;
+let z = document.getElementById("t3").innerText=y;
+let aa = g * h;
+let ab = document.getElementById("t4").innerText=aa;
+let ac = i * j;
+let ad = document.getElementById("t5").innerText=ac;
+let ae = k * l;
+let af = document.getElementById("t6").innerText=ae;
+let ag = m * n;
+let ah = document.getElementById("t7").innerText=ag;
+let ai = o * p;
+let aj = document.getElementById("t8").innerText=ai;
+let ak = q * r;
+let al = document.getElementById("t9").innerText=ak;
+let am = s * t;
+let an = document.getElementById("t10").innerText=am;
+let ay = b * -1;
+let az = f * -1;
+let bc = j * -1;
+let bb = n * -1;
+let bd = d * -1;
+let be = h * -1;
+let bf = l * -1;
+let bg = p * -1;
+let bh = r * -1;
+let bi = t * -1;
+let ao = ay * -1 * 1 - bd;
+let ar = az * -1 * 1 - be;
+let as = ao * -1 * 1 - ar;
+let at = bc * -1 * 1 - bf;
+let au = bb * -1 * 1 - bg;
+let av = at * -1 * 1 - au;
+let aw = as * -1 * 1 - av;
+let bj = bh * -1 * 1 - bi;
+let bk = aw * -1 * 1 - bj;
+//bl is the sum of f
+let bl = bk * -1;
+let aq = document.getElementById("t11").innerText=bl;
+let cg = u * -1;
+let bm = w * -1;
+let bn = y * -1;
+let bo = aa * -1;
+let bp = ac * -1;
+let bq = ae * -1;
+let br = ag * -1;
+let bs = ai * -1;
+let bt = ak * -1;
+let bu = am * -1;
+let bv = cg * -1 * 1 - bm;
+let bw = bn * -1 * 1 - bo;
+let bx = bv * -1 * 1 - bw;
+let by = bp * -1 * 1 - bq;
+let bz = br * -1 * 1 - bs;
+let ca = by * -1 * 1 - bz;
+let cb = bx * -1 * 1 - ca;
+let cc = bt * -1 * 1 - bu;
+let cd = cb * -1 * 1 - cc;
+//ce is the sum of fx
+let ce = cd * -1;
+let cf = document.getElementById("t12").innerText=ce;
+let ch = ce / bl;
+let ci = document.getElementById("t13").innerText=ch;
+let ck = a - cj;
+let cl = document.getElementById("t14").innerText=ck;
+let cm = c - cj;
+let cn = document.getElementById("t15").innerText=cm;
+let co = e - cj;
+let cp = document.getElementById("t16").innerText=co;
+let cq = g - cj;
+let cr = document.getElementById("t17").innerText=cq;
+let cs = i - cj;
+let ct = document.getElementById("t18").innerText=cs;
+let cu = k - cj;
+let cv = document.getElementById("t19").innerText=cu;
+let cw = m - cj;
+let cx = document.getElementById("t20").innerText=cw;
+let cy = o - cj;
+let cz = document.getElementById("t21").innerText=cy;
+let da = q - cj;
+let db = document.getElementById("t22").innerText=da;
+let dc = s - cj;
+let dd = document.getElementById("t23").innerText=dc;
+let de = Math.pow(ck,2);
+let df = document.getElementById("t24").innerText=de;
+let dg = Math.pow(cm,2);
+let dh = document.getElementById("t25").innerText=dg;
+let di = Math.pow(co,2);
+let dj = document.getElementById("t26").innerText=di;
+let dk = Math.pow(cq,2);
+let dl = document.getElementById("t27").innerText=dk;
+let dm = Math.pow(cs,2);
+let dn = document.getElementById("t28").innerText=dm;
+let dp = Math.pow(cu,2);
+let dq = document.getElementById("t29").innerText=dp;
+let dr = Math.pow(cw,2);
+let ds = document.getElementById("t30").innerText=dr;
+let dt = Math.pow(cy,2);
+let du = document.getElementById("t31").innerText=dt;
+let dv = Math.pow(da,2);
+let dw = document.getElementById("t32").innerText=dv;
+let dx = Math.pow(dc,2);
+let dy = document.getElementById("t33").innerText=dx;
+let ea = b * de;
+let eb = document.getElementById("t34").innerText=ea;
+let ec = d * dg;
+let ed = document.getElementById("t35").innerText=ec;
+let ee = f * di;
+let ef = document.getElementById("t36").innerText=ee;
+let eg = h * dk;
+let eh = document.getElementById("t37").innerText=eg;
+let ei = j * dm;
+let ej = document.getElementById("t38").innerText=ei;
+let ek = l * dp;
+let el = document.getElementById("t39").innerText=ek;
+let em = n * dr;
+let en = document.getElementById("t40").innerText=em;
+let eo = p * dt;
+let ep = document.getElementById("t41").innerText=eo;
+let eq = r * dv;
+let er = document.getElementById("t42").innerText=eq;
+let es = t * dx;
+let et = document.getElementById("t43").innerText=es;
+let eu = +ea + +ec + +ee + +eg + +ei + +ek + +em + +eo + +eq + +es;
+let ev = document.getElementById("t44").innerText=eu;
+}
+</script>
+</body>
+</html>

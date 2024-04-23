@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1900px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 250px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+    border: 4px solid #18bfef;
+}
+.calculator{
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+.top{
+    margin-left: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 35px;
+}
+.btn{
+    height: 50px;
+    background: black;
+    width: 200px;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+    margin-top: 15px;
+}
+span{
+    font-size: 25px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+}
+.matrixbox{
+    border: 3px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.box2{
+    height: 120px;
+    width: 130px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#b1, #d1, #b3, #d2, #b4, #d3, #e3, #f3{
+    margin-left: 47px;
+}
+#box3{
+    height: 120px;
+    width: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#cb, #fb, #ce{
+    margin-left: 5px;
+}
+#denominator{
+    margin-left: 47px;
+}
+.answerbox{
+    display: none;
+}
+@media(max-width: 320px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1700px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 25px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+}
+.matrixbox{
+    border: 3px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.box2{
+    height: 120px;
+    width: 130px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#b1, #d1, #b3, #d2, #b4, #d3, #e3, #f3{
+    margin-left: 40px;
+}
+#box3{
+    height: 120px;
+    width: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#cb, #fb, #ce{
+    margin-left: 5px;
+}
+#denominator{
+    margin-left: 40px;
+}
+.answerbox{
+    display: none;
+ }
+}
+@media(max-width: 375px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1700px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 25px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+}
+.matrixbox{
+    border: 3px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.box2{
+    height: 120px;
+    width: 130px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#b1, #d1, #b3, #d2, #b4, #d3, #e3, #f3{
+    margin-left: 40px;
+}
+#box3{
+    height: 120px;
+    width: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#cb, #fb, #ce{
+    margin-left: 5px;
+}
+#denominator{
+    margin-left: 40px;
+}
+.answerbox{
+    display: none;
+ }
+}
+@media(max-width: 435px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 1700px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.btn{
+  height: 50px;
+  background: black;
+  width: 200px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 25px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+}
+.matrixbox{
+    border: 3px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.box2{
+    height: 120px;
+    width: 130px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#b1, #d1, #b3, #d2, #b4, #d3, #e3, #f3{
+    margin-left: 40px;
+}
+#box3{
+    height: 120px;
+    width: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#cb, #fb, #ce{
+    margin-left: 5px;
+}
+#denominator{
+    margin-left: 40px;
+}
+.answerbox{
+    display: none;
+ }
+}
+@media(max-width: 1024px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 2300px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 4px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 35px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 250px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 35px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+}
+.matrixbox{
+    border: 4px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.box2{
+    height: 120px;
+    width: 130px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#b1, #d1, #b3, #d2, #b4, #d3, #e3, #f3{
+    margin-left: 47px;
+}
+#box3{
+    height: 120px;
+    width: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#cb, #fb, #ce{
+    margin-left: 5px;
+}
+#denominator{
+    margin-left: 47px;
+}
+.answerbox{
+    display: none;
+ }
+}
+@media(max-width: 1440px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 2300px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 60px;
+    outline: none;
+    border-radius: 15px;
+    width: 150px;
+    border: 4px solid black;
+    font-size: 25px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 35px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+.answer{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 30px;
+}
+.btn{
+  height: 70px;
+  background: black;
+  width: 240px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 25px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+}
+.matrixbox{
+    border: 4px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.box2{
+    height: 120px;
+    width: 130px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#b1, #d1, #b3, #d2, #b4, #d3, #e3, #f3{
+    margin-left: 47px;
+}
+#box3{
+    height: 120px;
+    width: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#cb, #fb, #ce{
+    margin-left: 5px;
+}
+#denominator{
+    margin-left: 47px;
+}
+.answerbox{
+    display: none;
+ }
+}
+@media(max-width: 2560px){
+body{
+    background: #3498DB;
+}
+.box{
+    height: 2300px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element{
+    margin-bottom: 10px;
+    height: 70px;
+    outline: none;
+    border-radius: 15px;
+    width: 250px;
+    border: 4px solid black;
+    font-size: 35px;
+}
+::placeholder{
+    padding: 0px 10px;
+}
+.element:hover{
+     border: 4px solid #18bfef;
+}
+.calculator{
+     padding-bottom: 10px;
+}
+.txt{
+    font-size: 35px;
+    margin-top: 500px;
+}
+.head{
+    margin-top: 40px;
+}
+.ans{
+    background: #fff;
+    width: 490px;
+    display: flex;
+    position: relative;
+    left: -12px;
+    height: 80px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 25px;
+    border: 3px solid black;
+}
+.answer{
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 34px;
+}
+#x, #y{
+    margin-left: 10px;
+}
+#emsg{
+    color: red;
+}
+.word{
+    font-size: 45px;
+}
+.btn{
+  height: 80px;
+  background: black;
+  width: 310px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 34px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+span{
+    font-size: 35px;
+}
+.ansbox{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: none;
+}
+#valued{
+    margin-left: 7px;
+}
+#valueb3, #valueb4, #a7, #c7{
+    border-right: 2px solid black;
+}
+#line{
+    border-bottom: 3px solid black;
+}
+#equal{
+    margin-left: 0px;
+}
+.spc{
+    margin-top: 30px;
+}
+.matrixbox{
+    border: 4px solid black;
+    border-radius: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 400px;
+}
+.box2{
+    height: 120px;
+    width: 130px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#b1, #d1, #b3, #d2, #b4, #d3, #e3, #f3{
+    margin-left: 47px;
+}
+#box3{
+    height: 120px;
+    width: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#cb, #fb, #ce{
+    margin-left: 5px;
+}
+#denominator{
+    margin-left: 47px;
+}
+.answerbox{
+    display: none;
+ }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>2×2 Simultaneous Equations</title>
+</head>
+<body>
+    <fieldset class="box">
+     <div class="head">
+   <form name="sform" oninput="return solve()">
+     <fieldset class="matrixbox">
+    <table class="calculator">
+  <tr>
+    <td colspan="5"><br><strong class="word">ax</strong></br>
+    <input class="element" type="number" name="a"></td>
+    <td><br><strong class="word">by</strong></br><input type="number" class="element" name="b" id="bv"></td>
+    <td class="txt">=</td>
+    <td><br><strong class="word">c</strong></br><input type="number" class="element" name="e"></td>
+  </tr>
+
+      <table class="top">     
+  <tr>
+    <td colspan="5"><br><strong class="word">ax</strong></br><input class="element" type="number" name="c"></td>
+    <td><br><strong class="word">by</strong></br><input type="number" class="element" name="d"></td>
+    <td class="txt">=</td>
+    <td><br><strong class="word">c</strong></br><input type="number" class="element" name="f"></td>
+  </tr>
+  </table>
+  </fieldset>
+  </form>
+  </div>
+              <div class="ans"><strong class="answer">X =<span id="x"></span></strong></div>
+
+           <div class="ans"><strong class="answer">Y =<span id="y"></span></strong></div>
+         
+    <p><button class="btn" onclick="return solvings()">Show Solvings</button></p>
+    
+    <div class="answerbox" id="answerbox">
+    <table id="box">
+        <tr>
+            <td colspan="5"><fieldset class="box2"><span id="a1"></span> <span id="b1"></span> <p><br> <span id="c1"></span> <span id="d1"></span></br></p></fieldset></td>
+            <td><fieldset id="box3"><span>x</span> <p><br><span id="b2">y</span></br></p></fieldset></td>
+            <td><span>=</span></td>
+            <td><fieldset id="box3"><span id="e1"></span> <p><br><span id="f1"></span></br></p></fieldset></td>
+        </tr>
+    </table>
+    
+    <p><fieldset class="box2"><span id="a2"></span> <span id="b3"></span> <p><br><span id="c2"></span> <span id="d2"></span></br></p></fieldset></p>
+    
+    <p><span>D =</span> <span id="ad"></span> <span>-</span> <span id="cb"></span> <span> = </span> <span id="j1"></span></p>
+    
+    <p><fieldset class="box2"><span id="e2"></span> <span id="b4"></span> <p><br><span id="f2"></span> <span id="d3"></span></br></p></fieldset></p>
+    
+    <p><span>Dx =</span> <span id="de"></span> <span>-</span> <span id="fb"></span> <span> = </span> <span id="n1"></span></p>
+    
+    <p><span>x =</span> <u><span>Dx</span></u><br><span id="denominator">D</span></br></p>
+    
+    <p><span>x =</span> <u><span id="n2"></span></u><br><span id="denominator"><span id="j2"></span></span></br></p>
+    
+    <p><span>x =</span> <span id="o1"></span></p>
+    
+    <p><fieldset class="box2"><span id="a3"></span> <span id="e3"></span> <p><br><span id="c3"></span> <span id="f3"></span></br></p></fieldset></p>
+    
+    <p><span>Dy =</span> <span id="fa"></span> <span>-</span> <span id="ce"></span> <span> = </span> <span id="s1"></span></p>
+    
+    <p><span>y =</span> <u><span>Dy</span></u><br><span id="denominator">D</span></br></p>
+    
+    <p><span>y =</span> <u><span id="s2"></span></u><br><span id="denominator"><span id="j3"></span></span></br></p>
+    
+    <p><span>y =</span> <span id="t1"></span></p>
+
+     
+
+   
+   
+    </fieldset>
+    
+    
+<script>
+function solve(){
+let a = document.sform.a.value;
+let b = document.sform.b.value;
+let e = document.sform.e.value;
+let c = document.sform.c.value;
+let d = document.sform.d.value;
+let f = document.sform.f.value;
+let g = a * d;
+let h = c * b;
+//j is the Det
+let j = g - h;
+let k = d * e;
+let l = f * b;
+let n = k - l;
+//o is equal to x
+let o = n / j;
+let p = document.getElementById("x").innerText=o;
+let q = f * a;
+let r = c * e;
+let s = q - r;
+let t = s / j;
+let u = document.getElementById("y").innerText=t;
+let v = document.getElementById("a1").innerText=a;
+let w = document.getElementById("b1").innerText=b;
+let x = document.getElementById("c1").innerText=c;
+let y = document.getElementById("d1").innerText=d;
+let z = document.getElementById("e1").innerText=e;
+let za = document.getElementById("f1").innerText=f;
+let zb = document.getElementById("a2").innerText=a;
+let zc = document.getElementById("b3").innerText=b;
+let zd = document.getElementById("c2").innerText=c;
+let ze = document.getElementById("d2").innerText=d;
+let zf = document.getElementById("ad").innerText=g;
+let zg = document.getElementById("cb").innerText=h;
+let zh = document.getElementById("j1").innerText=j;
+let zi = document.getElementById("e2").innerText=e;
+let zj = document.getElementById("b4").innerText=b;
+let zk = document.getElementById("f2").innerText=f;
+let zl = document.getElementById("d3").innerText=d;
+let zm = document.getElementById("de").innerText=k;
+let zn = document.getElementById("fb").innerText=l;
+let zo = document.getElementById("n1").innerText=n;
+let zp = document.getElementById("n2").innerText=n;
+let zq = document.getElementById("j2").innerText=j;
+let zr = document.getElementById("o1").innerText=o;
+let zs = document.getElementById("a3").innerText=a;
+let zt = document.getElementById("e3").innerText=e;
+let zu = document.getElementById("c3").innerText=c;
+let zv = document.getElementById("f3").innerText=f;
+let zw = document.getElementById("fa").innerText=q;
+let zx = document.getElementById("ce").innerText=r;
+let zy = document.getElementById("s1").innerText=s;
+let zz = document.getElementById("s2").innerText=s;
+let ab = document.getElementById("j3").innerText=j;
+let ac = document.getElementById("t1").innerText=t;
+
+if(a==null || a==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(b==null || b==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(c==null || c==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(d==null || d==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(e==null || e==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(f==null || f==""){
+    document.getElementById("answerbox").style.display="none";
+  }
+}
+
+function solvings(){
+let a = document.sform.a.value;
+let b = document.sform.b.value;
+let c = document.sform.c.value;
+let d = document.sform.d.value;
+let e = document.sform.e.value;
+let f = document.sform.f.value;
+     document.getElementById("answerbox").style.display="block";
+
+if(a==null || a==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(b==null || b==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(c==null || c==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(d==null || d==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(e==null || e==""){
+    document.getElementById("answerbox").style.display="none";
+}else if(f==null || f==""){
+    document.getElementById("answerbox").style.display="none";
+  }
+}
+</script>
+</body>
+</html>
